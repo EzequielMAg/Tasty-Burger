@@ -1,0 +1,22 @@
+.nav-footer{
+    display: flex;
+    /* background-color: aquamarine; */
+    gap: 10rem;
+}
+
+.elemento-nav{
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2.5rem;
+}
+
+.social-networks{
+    display: flex;
+    gap: 1.2rem;
+}
