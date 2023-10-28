@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,21 +8,36 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
 
+  @Input()
+  public userLoggedIn: boolean = false;
+
   constructor(private router: Router) { }
 
-  goToLogin() {
+
+  public goToLogin(): void {
     this.router.navigate(["auth/login"]);
   }
 
-  goToRegister() {
+  public goToRegister(): void {
     this.router.navigate(["auth/register"]);
   }
 
-  goToMenu() {
+  public goToMenu(): void {
     this.router.navigate(["products"]);
   }
 
-  goToHome() {
+  public goToHome(): void {
     this.router.navigate(["home"]);
   }
+
+  public goToOrders(): void {
+    this.router.navigate(['orders']);
+  }
+
+  public logout(): void {
+
+  }
+
+
+
 }
