@@ -6,10 +6,6 @@ const routes: Routes = [
   {
     path: '',
     component: MenuPageComponent
-  },
-  {
-    path: '**',
-    redirectTo: '404'
   }
 ]
 

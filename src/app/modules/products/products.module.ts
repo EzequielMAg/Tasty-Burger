@@ -6,6 +6,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductCardListComponent } from './components/product-card-list/products-card-list.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -19,6 +20,7 @@ import { ProductCardListComponent } from './components/product-card-list/product
   imports: [
     CommonModule,
     ProductsRoutingModule,
+    SharedModule,
   ]
 })
 export class ProductsModule { }

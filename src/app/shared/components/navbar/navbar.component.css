@@ -1,22 +1,58 @@
-#page-logo{
-    font-weight: bold;
-    color:burlywood;
-    
+#page-logo {
+  font-weight: bold;
+  color: burlywood;
 }
 
-.nav-bar{
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 2rem;
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+
+  background-color: #333;
 }
 
-nav{
-    display: flex;
-    gap: 1.3rem;
-    align-items: center;
+nav {
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
 }
 
-header img{
-    width: 50px;
-    height: 40px;
+header img {
+  width: 50px;
+  height: 40px;
 }
+
+/* #region ANIMACION DEBAJO DE LOS LINKS */
+.nav-links a {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+
+  /* Color de la línea de abajo */
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::before {
+  transform: scaleX(1);
+}
+/* #endregion */
+
+/* LINK ACTIVO */
+.nav-links a.active::before {
+  background-color: white;
+  transform: scaleX(1);
+}
+

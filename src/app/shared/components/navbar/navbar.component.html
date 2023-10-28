@@ -5,10 +5,10 @@
         My Hamburguer
         </a>
     </div>
-    <nav>
-        <a href="">Home</a>
-        <a href="">Menu</a>
-        <a href="">Log In</a>
-        <a href="">Register</a>
+    <nav class="nav-links">
+        <a (click)="goToHome()" routerLink="/home" routerLinkActive="active">Home</a>
+        <a (click)="goToMenu()" routerLink="/products" routerLinkActive="active">Menu</a>
+        <a (click)="goToLogin()" routerLink="/auth/login" routerLinkActive="active">Log In</a>
+        <a (click)="goToRegister()" routerLink="/auth/register" routerLinkActive="active">Register</a>
     </nav>
 </header>

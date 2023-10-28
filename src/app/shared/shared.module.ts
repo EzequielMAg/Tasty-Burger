@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,8 @@ import { HeroComponent } from './components/hero/hero.component';
     HeroComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
   ],
   exports: [
     NavbarComponent,
