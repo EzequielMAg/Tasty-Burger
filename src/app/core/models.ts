@@ -1,5 +1,23 @@
 import { v4 as uuid} from 'uuid';
-import { Category, IProduct } from './interfaces';
+import { Category, IProduct, IUser } from './interfaces';
+
+export class User implements IUser{
+    id: string;
+    name: string;
+    email: string;
+    password: string;
+    phoneNumber: number;
+    address: string;
+
+    constructor(user?: any){
+        this.id = user.id != null ? user.id : null;
+        this.name = user.name != null ? user.name : null;
+        this.email = user.email != null ? user.email : null;
+        this.password = user.password != null ? user.password : null;
+        this.phoneNumber = user.phoneNumber != null ? user.phoneNumber : null;
+        this.address = user.address != null ? user.address : null;
+    }
+}
 
 export class Product implements IProduct{
 
@@ -21,5 +39,4 @@ export class Product implements IProduct{
         this.category = product.category != null ? product.category : null;
     }
     
-
 }
