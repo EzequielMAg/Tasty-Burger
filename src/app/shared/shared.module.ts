@@ -23,7 +23,7 @@ import { HeroComponent } from './components/hero/hero.component';
     NavbarComponent,
     FooterComponent,
     Error404Component,
-    HeroComponent
+    HomePageComponent
   ]
 })
 export class SharedModule { }

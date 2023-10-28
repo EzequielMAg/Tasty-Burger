@@ -1,19 +1,24 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductCardListComponent } from './components/product-card-list/products-card-list.component';
-import { ProductCardComponent } from './components/product-card/product-card.component';
+import { NgModule } from '@angular/core';
+import { ProductsRoutingModule } from './products-routing.module';
+
 import { CartComponent } from './components/cart/cart.component';
+import { MenuPageComponent } from './pages/menu-page/menu-page.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductCardListComponent } from './components/product-card-list/products-card-list.component';
 
 
 
 @NgModule({
   declarations: [
-    ProductCardListComponent,
+    CartComponent,
+    MenuPageComponent,
     ProductCardComponent,
-    CartComponent
+    ProductCardListComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ProductsRoutingModule,
   ]
 })
 export class ProductsModule { }
