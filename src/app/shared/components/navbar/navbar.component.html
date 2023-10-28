@@ -8,7 +8,21 @@
     <nav class="nav-links">
         <a (click)="goToHome()" routerLink="/home" routerLinkActive="active">Home</a>
         <a (click)="goToMenu()" routerLink="/products" routerLinkActive="active">Menu</a>
-        <a (click)="goToLogin()" routerLink="/auth/login" routerLinkActive="active">Log In</a>
-        <a (click)="goToRegister()" routerLink="/auth/register" routerLinkActive="active">Register</a>
+
+        <!-- TODO: ACA FALTARIA DETECTAR QUE EL USUARIO ESTA REALMENTE LOGUEADO..
+            *PORQUE se manda un booleando userLoggedIn = true cuando se detecta
+             y ACTUALMENTE es como si fuera que esta logueado tan solo haciendo clic en el MENU de este componente-->
+        <ng-container *ngIf="!userLoggedIn; else isLoggedIn">
+          <a (click)="goToLogin()" routerLink="/auth/login" routerLinkActive="active">Log In</a>
+          <a (click)="goToRegister()" routerLink="/auth/register" routerLinkActive="active">Register</a>
+        </ng-container>
+
+        <ng-template #isLoggedIn>
+          <a (click)="goToOrders()" routerLink="/orders" routerLinkActive="active">Orders</a>
+
+          <!-- TODO: ACA FALTARIA DETECTAR QUE EL USUARIO REALMENTE SE DESLOGUEÓ.. -->
+          <a (click)="goToHome()" routerLink="/ home" routerLinkActive="active">Log Out</a>
+        </ng-template>
+
     </nav>
 </header>
