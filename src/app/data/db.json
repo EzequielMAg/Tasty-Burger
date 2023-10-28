@@ -1,0 +1,321 @@
+{
+  "users": [
+  {
+    "id": "1",
+    "name": "adm",
+    "email": "adm@gmail.com",
+    "password": "123",
+    "phoneNumber": 2254532122,
+    "address": "prueba 123"
+    
+  },
+  {
+    "id": "2",
+    "name": "flor",
+    "email": "flor@gmail.com",
+    "password": "123",
+    "phoneNumber": 2254533702,
+    "address": "prueba 123"
+    
+  },
+  {
+    "id": "3",
+    "name": "eze",
+    "email": "eze@gmail.com",
+    "password": "123",
+    "phoneNumber": 2254411162,
+    "address": "prueba 123"
+    
+  }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "System",
+      "price": 4200,
+      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, alioli de berenjena ahumada, pepinillos",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fc05518c7-e67c-4003-be76-6e1d4814715a?alt=media"
+    },
+    {
+      "id": "2",
+      "name": "Candy",
+      "price": 4200,
+      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, cebolla caramelizad",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Ffa905965-8066-44b0-acf5-7c9749f38b7a?alt=media"
+    },
+    {
+      "id": "3",
+      "name": "Crispy Onion",
+      "price": 4300,
+      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, ali oli, mil islas, cebolla crispy, pepinillos (opcional)",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Ffa102e6f-0b8b-4585-8f59-511e28878d8c?alt=media"
+    },
+    {
+      "id": "4",
+      "name": "American",
+      "price": 3900,
+      "description": "Medallon 120gr (blend secreto), cheddar x4, ketchup, mostaza, cebolla cubitos, pepinillos (opcional)",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F3b73182d-3fa3-418a-b876-90b2f1af2c1f?alt=media"
+    },
+    {
+      "id": "5",
+      "name": "Classic",
+      "price": 4200,
+      "description": "Medallon 120gr (blend secreto), cheddar x4, salsa mil islas, cebollas, pepinillos, lechuga, tomate (opcional)",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fdff78dfa-e738-4109-ba46-cfc30baf3caa?alt=media"
+    },
+    {
+      "id": "6",
+      "name": "Tasty",
+      "price": 3900,
+      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, ali oli, mil islas, cebolla crispy, pepinillos (opcional)",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F8792c93d-5cba-478a-ba23-29cf4a8ed5d1?alt=media"
+    },
+    {
+      "id": "7",
+      "name": "Fried Onion",
+      "price": 3900,
+      "description": "Medallon 120gr (blend secreto), cheddar x4, cebolla smasheada en la plancha",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F788353af-9e35-4c22-9ab7-30ba985e151a?alt=media"
+    },
+    {
+      "id": "8",
+      "name": "Cheese Bacon",
+      "price": 4200,
+      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fdff78dfa-e738-4109-ba46-cfc30baf3caa?alt=media"
+    },
+    {
+      "id": "9",
+      "name": "Stacker",
+      "price": 4200,
+      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, salsa stacker",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F6d7337c5-d290-4353-8e5f-ad0ce968e369?alt=media"
+    },
+    {
+      "id": "10",
+      "name": "Cheese Burger",
+      "price": 3700,
+      "description": "Medallon 120gr (blend secreto), cheddar x4",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fb4059505-8157-48ec-87c5-fd8459b035d6?alt=media"
+    },
+    {
+      "id": "11",
+      "name": "Blue Cheese",
+      "price": 4200,
+      "description": "Medallon 120gr (blend secreto), queso emmental x2, queso azul, bacon ahumado, cebolla morada",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F7a2dba63-dd75-44e0-879f-9a4d30f28bfb?alt=media"
+    },
+    {
+      "id": "12",
+      "name": "Pina Burger",
+      "price": 4300,
+      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, aros de cebolla, barbacoa, alioli ahumado",
+      "category": "Hamburguesas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fe3714f0f-ba65-4f83-aa99-204cb1819e39?alt=media"
+    },
+    {
+      "id": "13",
+      "name": "Calabaza Burger",
+      "price": 4200,
+      "description": "Medallon veggie de 150gr, ali oli de berenjena ahumada, morrones asados, lechuga, cebolla morada, palta, cheddar x2",
+      "category": "Hamburguesas Veganas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F73b5f69b-1453-4d69-a1f0-1f88f1c7edff?alt=media"
+    },
+    {
+      "id": "14",
+      "name": "Remolacha Burger",
+      "price": 4200,
+      "description": "Medallon veggie de 150gr, ali oli de berenjena ahumada, morrones asados, lechuga, cebolla morada, palta, cheddar x2",
+      "category": "Hamburguesas Veganas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Ffadf048c-ebd6-4e91-8220-3917999ed617?alt=media"
+    },
+    {
+      "id": "15",
+      "name": "Coca Cola",
+      "price": 850,
+      "description": "Lata 354ml",
+      "category": "Bebidas sin alcohol",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F01d4cfdf-a462-4fb5-81f9-ffde1af9c8b4_500x500?alt=media"
+    },
+    {
+      "id": "16",
+      "name": "Sprite",
+      "price": 850,
+      "description": "Lata 354ml",
+      "category": "Bebidas sin alcohol",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F40127eae-4906-4643-b793-f0866fcc1cf3_500x500?alt=media"
+    },
+    {
+      "id": "17",
+      "name": "Coca Cola Zero",
+      "price": 850,
+      "description": "Lata 354ml",
+      "category": "Bebidas sin alcohol",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F5ef530be-f6d4-43e1-b3fb-24d0fd9b3b69_500x500?alt=media"
+    },
+    {
+      "id": "18",
+      "name": "Fanta",
+      "price": 850,
+      "description": "Lata 354ml",
+      "category": "Bebidas sin alcohol",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F3035cf22-2fa7-4904-acb2-62d2713b5a9c_500x500?alt=media"
+    },
+    {
+      "id": "19",
+      "name": "Agua",
+      "price": 800,
+      "description": "Botella 500ml",
+      "category": "Bebidas sin alcohol",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fb7b0414f-375c-4851-aa21-c0a5f3bdd090_500x500?alt=media"
+    },
+    {
+      "id": "20",
+      "name": "Agua saborizada",
+      "price": 850,
+      "description": "Botella 500ml",
+      "category": "Bebidas sin alcohol",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F9e9ba7cb-5623-42fb-8764-9c8994e48384_500x500?alt=media"
+    },
+    {
+      "id": "21",
+      "name": "Lata Andes Negra",
+      "price": 1300,
+      "description": "",
+      "category": "Cervezas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F4277164f-552a-4788-8bc3-1fb8a123307a_500x500?alt=media"
+    },
+    {
+      "id": "22",
+      "name": "Lata Andes Roja",
+      "price": 1300,
+      "description": "",
+      "category": "Cervezas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fe5dfadea-a3f9-41ff-8dc5-2a90491d5e80?alt=media"
+    },
+    {
+      "id": "23",
+      "name": "Lata Andes Rubia",
+      "price": 1300,
+      "description": "",
+      "category": "Cervezas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fc67d5417-7f68-4afc-b05f-9d413fc3ee30_500x500?alt=media"
+    },
+    {
+      "id": "24",
+      "name": "Lata Patagonia 24/7",
+      "price": 1300,
+      "description": "",
+      "category": "Cervezas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fc03ec87b-5684-4520-9bbb-2029c2557f42_500x500?alt=media"
+    },
+    {
+      "id": "25",
+      "name": "Corona",
+      "price": 1500,
+      "description": "Botella 330cc",
+      "category": "Cervezas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fa3f9401e-db36-4b45-9150-c5928a387baf_500x500?alt=media"
+    },
+    {
+      "id": "26",
+      "name": "Corona",
+      "price": 2400,
+      "description": "Botella 710cc",
+      "category": "Cervezas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F6d1ad5fd-dc38-4942-90ba-67a42348e950?alt=media"
+    },
+    {
+      "id": "27",
+      "name": "Lata Andes ipa",
+      "price": 1300,
+      "description": "",
+      "category": "Cervezas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fc027789c-5c12-4c5f-84b4-c33ba86ed50d?alt=media"
+    },
+    {
+      "id": "28",
+      "name": "Franui",
+      "price": 2800,
+      "description": "Las originales Frambuesas de la Patagonia bañadas en dos chocolates: Chocolate blanco y Chocolate con leche. Peso Neto 150 gr. ",
+      "category": "Postres",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fcb312aa6-5f1f-4337-9ddb-3b097753bb8f?alt=media"
+    },
+    {
+      "id": "29",
+      "name": "Ensalada CAESAR",
+      "price": 3200,
+      "description": "Lechugas morada y manteca -croutons - queso en hebras - crocante de pollo",
+      "category": "Ensaladas",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F609cf4ff-821f-4e5c-bcda-84f14771f445?alt=media"
+    },
+    {
+      "id": "30",
+      "name": "Ensalada griega",
+      "price": 3200,
+      "description": "Aceitunas, queso en hebras, tomate y pepino",
+      "category": "Ensaladas",
+      "urlImage": "https://www.comedera.com/wp-content/uploads/2018/05/ensalada-griega.jpg"
+    },
+    {
+      "id": "31",
+      "name": "Papas Tasty",
+      "price": 3800,
+      "description": "Aderezo tasty y bacon, 500gr",
+      "category": "Frituras",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F8e5e833e-2916-4923-927a-78655062f765?alt=media"
+    },
+    {
+      "id": "32",
+      "name": "Papas Clasicas",
+      "price": 3200,
+      "description": "500gr",
+      "category": "Frituras",
+      "urlImage": "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcR5_LLy36b5dtThDnH0Atq15SsDDlrOravjPxODHhCsEtHoh72BU5JMXs9I7wnSAq2M"
+    },
+    {
+      "id": "33",
+      "name": "Papas Cheddar, Bacon y verdeo",
+      "price": 3900,
+      "description": "500gr",
+      "category": "Frituras",
+      "urlImage": "https://locosxlaparrilla.com/wp-content/uploads/2015/02/Receta-recetas-locos-x-la-parrilla-locosxlaparrilla-receta-papas-fritas-cheddar-verdeo-panceta-papas-fritas-cheddar-verde-3.jpg"
+    },
+    {
+      "id": "34",
+      "name": "Aros de cebolla",
+      "price": 3800,
+      "description": "",
+      "category": "Frituras",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F10236ee5-793b-4db8-a612-6e17710fefb8?alt=media"
+    },
+    {
+      "id": "35",
+      "name": "Tequeños",
+      "price": 3800,
+      "description": "Con guarni de fritas + dip barbacoa picante y ali oli",
+      "category": "Frituras",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fe5399112-10aa-4c63-b227-4ef56b00fa45?alt=media"
+    },
+    {
+      "id": "36",
+      "name": "Tequeños Veganos",
+      "price": 3800,
+      "description": "500gr",
+      "category": "Frituras",
+      "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F53ebce33-b391-43b2-9a3c-7cce6e7cf1fc?alt=media"
+    }
+  ]
+}
