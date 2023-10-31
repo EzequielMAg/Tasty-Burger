@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'products-product-card',
+  selector: 'product-card',
   templateUrl: './product-card.component.html',
-  styles: [
-  ]
+  styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent {
 
