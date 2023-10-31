@@ -1,5 +1,5 @@
 export interface IUser {
-  id:          string | null;
+  id:          string;// | null;  //TODO: Revisar que pasa aca despues por haber comentado esto..
   name:        string;
   email:       string;
   password:    string;
@@ -8,7 +8,7 @@ export interface IUser {
 }
 
 export interface IProduct{
-  id:          string | null;
+  id:          string;// | null;  //TODO: Revisar que pasa aca despues por haber comentado esto..
   name:        string;
   price:       number;
   description: string;
@@ -30,5 +30,5 @@ export enum Category{
 export interface ICart{
   productList: IProduct[],
   cartPrice:   number,
-  payMode:     string
+  payMode:     string,
 }

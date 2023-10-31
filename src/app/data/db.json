@@ -7,7 +7,6 @@
     "password": "123",
     "phoneNumber": 2254532122,
     "address": "prueba 123"
-    
   },
   {
     "id": "2",
@@ -16,7 +15,6 @@
     "password": "123",
     "phoneNumber": 2254533702,
     "address": "prueba 123"
-    
   },
   {
     "id": "3",
@@ -25,7 +23,6 @@
     "password": "123",
     "phoneNumber": 2254411162,
     "address": "prueba 123"
-    
   }
   ],
   "products": [
