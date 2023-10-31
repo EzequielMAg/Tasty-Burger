@@ -1,2 +1,19 @@
-<shared-navbar></shared-navbar>
-<p>login works!</p>
+<form class="login-wrap" (ngSubmit)="initSession()">
+  <div class="login-html">
+
+    <div class="group">
+      <label for="email" class="label">Correo electronico</label>
+      <input type="text" name="email" class="input" [(ngModel)]="email">
+    </div>
+
+    <div class="group">
+      <label for="password" class="label">Contraseña</label>
+      <input type="password" name="password" class="input" [(ngModel)]="password">
+    </div>
+
+    <div class="group">
+      <button type="submit" class="button">Iniciar sesión</button>
+    </div>
+
+  </div>
+</form>
