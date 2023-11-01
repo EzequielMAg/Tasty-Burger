@@ -36,9 +36,9 @@
   "products": [
     {
       "id": "1",
-      "name": "System",
+      "name": "Tasty Burger",
       "price": 4200,
-      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, alioli de berenjena ahumada, pepinillos",
+      "description": "Medallon 120gr, cheddar x4, bacon ahumado, alioli de berenjena, pepinillos",
       "category": "Hamburguesas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fc05518c7-e67c-4003-be76-6e1d4814715a?alt=media"
     },
@@ -46,7 +46,7 @@
       "id": "2",
       "name": "Candy",
       "price": 4200,
-      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, cebolla caramelizad",
+      "description": "Medallon 120gr, cheddar x4, bacon ahumado, cebolla caramelizada",
       "category": "Hamburguesas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Ffa905965-8066-44b0-acf5-7c9749f38b7a?alt=media"
     },
@@ -54,7 +54,7 @@
       "id": "3",
       "name": "Crispy Onion",
       "price": 4300,
-      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, ali oli, mil islas, cebolla crispy, pepinillos (opcional)",
+      "description": "Medallon 120gr, cheddar x4, bacon ahumado, ali oli, mil islas, cebolla crispy",
       "category": "Hamburguesas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Ffa102e6f-0b8b-4585-8f59-511e28878d8c?alt=media"
     },
@@ -62,7 +62,7 @@
       "id": "4",
       "name": "American",
       "price": 3900,
-      "description": "Medallon 120gr (blend secreto), cheddar x4, ketchup, mostaza, cebolla cubitos, pepinillos (opcional)",
+      "description": "Medallon 120gr, cheddar x4, ketchup, mostaza, cebolla cubitos, pepinillos",
       "category": "Hamburguesas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F3b73182d-3fa3-418a-b876-90b2f1af2c1f?alt=media"
     },
@@ -70,7 +70,7 @@
       "id": "5",
       "name": "Classic",
       "price": 4200,
-      "description": "Medallon 120gr (blend secreto), cheddar x4, salsa mil islas, cebollas, pepinillos, lechuga, tomate (opcional)",
+      "description": "Medallon 120gr, cheddar x4, salsa mil islas, cebollas, pepinillos, lechuga, tomate",
       "category": "Hamburguesas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fdff78dfa-e738-4109-ba46-cfc30baf3caa?alt=media"
     },
@@ -78,7 +78,7 @@
       "id": "6",
       "name": "Tasty",
       "price": 3900,
-      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, ali oli, mil islas, cebolla crispy, pepinillos (opcional)",
+      "description": "Medallon 120gr, cheddar x4, bacon ahumado, ali oli, mil islas, cebolla crispy, pepinillos",
       "category": "Hamburguesas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F8792c93d-5cba-478a-ba23-29cf4a8ed5d1?alt=media"
     },
@@ -118,7 +118,7 @@
       "id": "11",
       "name": "Blue Cheese",
       "price": 4200,
-      "description": "Medallon 120gr (blend secreto), queso emmental x2, queso azul, bacon ahumado, cebolla morada",
+      "description": "Medallon 120gr, queso emmental x2, queso azul, bacon ahumado, cebolla morada",
       "category": "Hamburguesas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F7a2dba63-dd75-44e0-879f-9a4d30f28bfb?alt=media"
     },
@@ -126,7 +126,7 @@
       "id": "12",
       "name": "Pina Burger",
       "price": 4300,
-      "description": "Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, aros de cebolla, barbacoa, alioli ahumado",
+      "description": "Medallon 120gr, cheddar x4, bacon ahumado, aros de cebolla, barbacoa, alioli ahumado",
       "category": "Hamburguesas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fe3714f0f-ba65-4f83-aa99-204cb1819e39?alt=media"
     },
@@ -134,7 +134,7 @@
       "id": "13",
       "name": "Calabaza Burger",
       "price": 4200,
-      "description": "Medallon veggie de 150gr, ali oli de berenjena ahumada, morrones asados, lechuga, cebolla morada, palta, cheddar x2",
+      "description": "Medallon veggie, ali oli de berenjena ahumada, morrones asados, lechuga, cebolla morada, palta, cheddar x2",
       "category": "Hamburguesas Veganas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F73b5f69b-1453-4d69-a1f0-1f88f1c7edff?alt=media"
     },
@@ -142,7 +142,7 @@
       "id": "14",
       "name": "Remolacha Burger",
       "price": 4200,
-      "description": "Medallon veggie de 150gr, ali oli de berenjena ahumada, morrones asados, lechuga, cebolla morada, palta, cheddar x2",
+      "description": "Medallon, ali oli de berenjena ahumada, morrones asados, lechuga, cebolla morada, palta, cheddar x2",
       "category": "Hamburguesas Veganas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Ffadf048c-ebd6-4e91-8220-3917999ed617?alt=media"
     },
@@ -228,17 +228,17 @@
     },
     {
       "id": "25",
-      "name": "Corona",
+      "name": "Corona 330cc",
       "price": 1500,
-      "description": "Botella 330cc",
+      "description": "",
       "category": "Cervezas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fa3f9401e-db36-4b45-9150-c5928a387baf_500x500?alt=media"
     },
     {
       "id": "26",
-      "name": "Corona",
+      "name": "Corona 710cc",
       "price": 2400,
-      "description": "Botella 710cc",
+      "description": "",
       "category": "Cervezas",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F6d1ad5fd-dc38-4942-90ba-67a42348e950?alt=media"
     },
@@ -254,7 +254,7 @@
       "id": "28",
       "name": "Franui",
       "price": 2800,
-      "description": "Las originales Frambuesas de la Patagonia bañadas en dos chocolates: Chocolate blanco y Chocolate con leche. Peso Neto 150 gr. ",
+      "description": "Las originales Frambuesas de la Patagonia bañadas en dos chocolates. Peso Neto 150 gr. ",
       "category": "Postres",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fcb312aa6-5f1f-4337-9ddb-3b097753bb8f?alt=media"
     },
@@ -270,7 +270,7 @@
       "id": "30",
       "name": "Ensalada griega",
       "price": 3200,
-      "description": "Aceitunas, queso en hebras, tomate y pepino",
+      "description": "Aceitunas - queso en hebras - tomate - pepino",
       "category": "Ensaladas",
       "urlImage": "https://www.comedera.com/wp-content/uploads/2018/05/ensalada-griega.jpg"
     },

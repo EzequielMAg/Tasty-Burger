@@ -18,7 +18,7 @@ export interface IProduct{
 }
 
 export enum Category{
-  Burguers = "Hamburguesa",
+  Burguers = "Hamburguesas",
   SoftDrinks = "Bebidas sin alcohol",
   Beers = "Cervezas",
   Fries = "Frituras",
