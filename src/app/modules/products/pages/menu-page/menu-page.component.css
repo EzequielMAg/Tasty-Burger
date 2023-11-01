@@ -23,3 +23,20 @@ hr{
 
 }
 
+.title{
+    margin-top:4rem;
+}
+
+  
+shared-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; 
+  }
+
+
+products-cart{
+    margin-bottom: 1.8rem;
+}

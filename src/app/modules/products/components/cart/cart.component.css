@@ -17,6 +17,9 @@
 
 .cart{
     background-color: rgb(51, 51, 51);
+    position: sticky;
+    top:5rem;
+    bottom: 2rem;
 
 }
 
