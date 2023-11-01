@@ -1,3 +1,25 @@
 .wrapper{
     background-image: url('https://cdn.pixabay.com/photo/2022/08/30/23/27/burger-pattern-7422088_1280.png');
+    background-repeat: repeat;
+    padding: .5rem 1rem 0 1rem;
+
+    
 }
+
+.wrapper h2{
+    margin-bottom: .1rem;
+    
+}
+
+hr{
+    margin-top:0;
+    border: 1.2px solid black;
+    opacity: .75;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+
+}
+

@@ -1,0 +1,54 @@
+
+.cart-center{
+    background-color: rgb(221, 221, 221);
+    width: 20rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-empty{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cart{
+    background-color: rgb(51, 51, 51);
+
+}
+
+.cart h3{
+    text-align: center;
+    color:white;
+}
+
+
+
+/* color: rgb(255, 127, 31); */
+
+/*
+colores de logo
+fuego:
+rgb(255, 190, 29); amarillo
+rgb(255, 127, 31); naranja
+rgb(221, 58, 14); naranja rojizo
+
+hamburguesa: 
+
+pan claro: #f9a331
+pan sombra: #d47a25
+
+lechuga luz: rgb(118, 201, 27)
+lechuga sombra: rgb(115, 156, 40)
+
+tomate:rgb(251, 26, 3)
+queso:rgb(253, 176, 22)
+carne:rgb(153, 3, 30)
+
+base:rgb(216, 176, 154)
+
+
+*/

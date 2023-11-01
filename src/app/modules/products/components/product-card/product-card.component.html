@@ -1,10 +1,11 @@
 <div class="product-card">
-    <img src="https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fc05518c7-e67c-4003-be76-6e1d4814715a?alt=media" alt="">
+    <!-- <img src="{{product.urlImage}}" alt=""> -->
+    <img [src]="product.urlImage" alt="">
     <div class="product-description">
-        <h4>System</h4>
-        <p>Medallon 120gr (blend secreto), cheddar x4, bacon ahumado, alioli de berenjena ahumada, pepinillos</p>
+        <h4>{{product.name}}</h4>
+        <p>{{product.description}}</p>
         <div class="product-price-counter">
-            <p>$4200</p>
+            <p>${{product.price}}</p>
             <div class="product-counter"> <!--componente product-counter?-->
                 <button>-</button>
                 <p>0</p>

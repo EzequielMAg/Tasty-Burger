@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Category } from 'src/app/core/interfaces';
+import { Product } from 'src/app/core/models';
 
 @Component({
   selector: 'product-card',
@@ -6,6 +8,13 @@ import { Component } from '@angular/core';
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.css']
 })
-export class ProductCardComponent {
+export class ProductCardComponent{
+
+  @Input()
+  public product: Product = new Product(
+    {id:'0'}
+  );
+
+
 
 }

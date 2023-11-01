@@ -1,7 +1,15 @@
 <shared-navbar [userLoggedIn]="true"></shared-navbar>
 
 <div class="wrapper">
-    <products-card-list></products-card-list>
+    <div class="title">
+        <h2>MENU</h2>
+        <hr>
+    </div>
+    <div class="menu">
+        <products-card-list></products-card-list>
+        <products-cart></products-cart>
+    </div>
+
 </div>
 
 <shared-footer></shared-footer>
