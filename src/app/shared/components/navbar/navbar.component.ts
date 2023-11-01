@@ -14,7 +14,7 @@ export class NavbarComponent {
   constructor(private router: Router) { }
 
 
-  public goToLogin(): void {
+ /*  public goToLogin(): void {
     this.router.navigate(["auth/login"]);
   }
 
@@ -32,7 +32,7 @@ export class NavbarComponent {
 
   public goToOrders(): void {
     this.router.navigate(['orders']);
-  }
+  } */
 
   public logout(): void {
 

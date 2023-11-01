@@ -23,6 +23,14 @@
     "password": "123",
     "phoneNumber": 2254411162,
     "address": "prueba 123"
+  },
+  {
+    "id": "4",
+    "name": "eze",
+    "email": "dev@gmail.com",
+    "password": "123",
+    "phoneNumber": 2254411162,
+    "address": "prueba 123"
   }
   ],
   "products": [
