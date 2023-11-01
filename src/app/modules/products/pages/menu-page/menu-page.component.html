@@ -7,7 +7,19 @@
   </div>
 
   <div class="menu">
-    <products-card-list [products]="products"></products-card-list>
+    <!--si hago de esta manera en card list no va a hacer falta un input por cada categoria 
+      y estaria reutilizando la product card list-->
+    <div>
+      <products-card-list [products]="productsBurguers"></products-card-list>
+      <products-card-list [products]="productsBurguerVeggies"></products-card-list>
+      <products-card-list [products]="productsFries"></products-card-list>
+      <products-card-list [products]="productsSalads"></products-card-list>
+      <products-card-list [products]="productsSoftDrinks"></products-card-list>
+      <products-card-list [products]="productsBeers"></products-card-list>
+      <products-card-list [products]="productsDesserts"></products-card-list>
+    </div>
+    <!--antes:-->
+    <!-- <products-card-list [products]="products"></products-card-list> -->
     <products-cart></products-cart>
   </div>
 </div>

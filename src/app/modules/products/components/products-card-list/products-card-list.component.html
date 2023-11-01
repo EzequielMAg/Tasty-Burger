@@ -1,7 +1,12 @@
+<ng-container *ngIf="products.length !== 0">
+    <h3>{{products[0].category}}</h3>
+</ng-container>
 
+<!--mostraba 16 errores en consola, ya que el arreglo estaba vacio(?), (arriba se muestra la solución que encontramos):-->
+<!-- <h3>{{products[0].category}}</h3> -->
 
 <div class="product-list">
-    <div *ngFor="let product of products" >
+    <div *ngFor="let product of products; let i = index" >
         <product-card [product] = "product"></product-card>
     </div>
 

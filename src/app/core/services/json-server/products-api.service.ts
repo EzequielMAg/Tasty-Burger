@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of } from 'rxjs';
 import { Product } from '../../models';
+import { Category } from '../../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +31,10 @@ export class ProductsApiService {
 
   public updateProduct(product: Product): Observable<boolean> {
     return this.http.patch<boolean>(`${this.baseURL}/${product.id}`, product);
+  }
+
+  public getProductsByCategory(category: Category): Observable<Product[]> {
+    console.log(category);
+    return this.http.get<Product[]>(`${this.baseURL}?category=${category}`);
   }
 }
