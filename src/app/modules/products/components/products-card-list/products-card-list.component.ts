@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Category } from 'src/app/core/interfaces';
 import { Product } from 'src/app/core/models';
 
@@ -9,6 +9,7 @@ import { Product } from 'src/app/core/models';
 })
 export class ProductCardListComponent {
 
+  @Input()
   public products: Product[] = [{
     id: '0123',
     name: "Candy",

@@ -13,27 +13,6 @@ export class NavbarComponent {
 
   constructor(private router: Router) { }
 
-
- /*  public goToLogin(): void {
-    this.router.navigate(["auth/login"]);
-  }
-
-  public goToRegister(): void {
-    this.router.navigate(["auth/register"]);
-  }
-
-  public goToMenu(): void {
-    this.router.navigate(["products"]);
-  }
-
-  public goToHome(): void {
-    this.router.navigate(["home"]);
-  }
-
-  public goToOrders(): void {
-    this.router.navigate(['orders']);
-  } */
-
   public logout(): void {
 
   }
