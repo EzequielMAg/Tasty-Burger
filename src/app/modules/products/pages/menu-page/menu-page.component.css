@@ -1,5 +1,6 @@
 .wrapper{
     background-image: url('https://cdn.pixabay.com/photo/2022/08/30/23/27/burger-pattern-7422088_1280.png');
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0-4YJEqykjkz-RQ6ZjpaRRbBXdycOBSM7rg&usqp=CAU'); */
     background-repeat: repeat;
     padding: .5rem 1rem 0 1rem;
 
@@ -16,7 +17,6 @@ hr{
     border: 1.2px solid black;
     opacity: .75;
 }
-
 .menu{
     display: flex;
     justify-content: space-between;

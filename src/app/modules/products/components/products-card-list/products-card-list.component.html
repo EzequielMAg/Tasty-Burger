@@ -1,5 +1,8 @@
 <ng-container *ngIf="products.length !== 0">
-    <h3>{{products[0].category}}</h3>
+    <div class="category-name">
+        <h3>{{products[0].category}}</h3>
+        <hr>
+    </div>
 </ng-container>
 
 <!--mostraba 16 errores en consola, ya que el arreglo estaba vacio(?), (arriba se muestra la solución que encontramos):-->
