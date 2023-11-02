@@ -1,7 +1,7 @@
 
 .cart-center{
     background-color: rgb(221, 221, 221);
-    width: 20rem;
+    width: 17rem;
     height: 30rem;
     display: flex;
     flex-direction: column;
@@ -26,6 +26,12 @@
 .cart h3{
     text-align: center;
     color:white;
+}
+
+@media (min-width: 1100px){
+    .cart-center{
+        width: 24rem;
+    }
 }
 
 

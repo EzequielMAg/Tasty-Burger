@@ -1,14 +1,15 @@
 .wrapper{
-    background-image: url('https://cdn.pixabay.com/photo/2022/08/30/23/27/burger-pattern-7422088_1280.png');
-    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0-4YJEqykjkz-RQ6ZjpaRRbBXdycOBSM7rg&usqp=CAU'); */
+    background-image: url('./../../../../../assets/images/patron-prueba6.png');
     background-repeat: repeat;
-    padding: .5rem 1rem 0 1rem;
+    padding: .5rem 1.3rem 0 1.3rem;
 
     
 }
 
-.wrapper h2{
-    margin-bottom: .1rem;
+h1{
+   background: linear-gradient(-45deg, #ff7c00 0%, rgb(221, 58, 14) 100%);
+   color:white;
+   text-align: center;
     
 }
 
@@ -39,4 +40,11 @@ shared-navbar {
 
 products-cart{
     margin-bottom: 1.8rem;
+}
+
+@media (min-width: 1100px){
+
+    .wrapper{
+        padding: .5rem 2.3rem 0 2.3rem;
+    }
 }
