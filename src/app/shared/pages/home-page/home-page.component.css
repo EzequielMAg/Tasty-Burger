@@ -1,35 +1,19 @@
 .background-image {
-    /* background-image: url('https://cdn.pixabay.com/photo/2023/10/08/13/03/ai-generated-8302142_1280.jpg'); */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    min-height: 100vh; /* Establece la altura mínima de la imagen al alto de la ventana */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2023/10/08/13/03/ai-generated-8302142_1280.jpg");
-  }
-  
-  shared-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2; 
-  }
-  
-  shared-footer {
-    position: relative;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1; 
-  }
-
-shared-hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
-    /* Agrega otros estilos necesarios para el hero */
+  /* background-image: url('https://cdn.pixabay.com/photo/2023/10/08/13/03/ai-generated-8302142_1280.jpg'); */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  /* Establece la altura mínima de la imagen al alto de la ventana */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2023/10/08/13/03/ai-generated-8302142_1280.jpg");
 }
 
+shared-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  /* Asegura que esté por encima de la imagen de fondo */
+  /* Agrega otros estilos necesarios para el hero */
+}
