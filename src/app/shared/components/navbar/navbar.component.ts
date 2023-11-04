@@ -10,16 +10,11 @@ import { AuthService } from 'src/app/core/services/auth.service';
 export class NavbarComponent implements OnInit{
 
   /* @Input() */
-  public userLoggedIn: boolean = false;
+  /* public userLoggedIn: boolean = false; */
 
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.userLoggedIn = this.authService.checkAuthentication();
-  }
-
-  public goToLogin() {
-    this.router.navigate(["/auth/login"]);
   }
 
   public logOut() {
@@ -27,6 +22,9 @@ export class NavbarComponent implements OnInit{
     this.router.navigate(['']);
   }
 
+  get userLoggedIn() {
+    return this.authService.userLoggedIn;
+  }
 
 
 }

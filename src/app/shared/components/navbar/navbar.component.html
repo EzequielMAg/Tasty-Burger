@@ -1,28 +1,25 @@
 <header class="nav-bar">
-    <div>
-        <a id="page-logo" href="">
-        <img src="./../../../../assets/images/logo-final-v2.png" alt="Logo de la página" href="">
 
-        </a>
-    </div>
-    <nav class="nav-links">
-        <a routerLink="/home" routerLinkActive="active">Home</a>
-        <a routerLink="/products" routerLinkActive="active">Menu</a>
+  <div>
+    <a id="page-logo" href="">
+      <img src="./../../../../assets/images/logo-final-v2.png" alt="Logo de la página" href="">
+    </a>
+  </div>
 
-        <!-- TODO: ACA FALTARIA DETECTAR QUE EL USUARIO ESTA REALMENTE LOGUEADO..
-            *PORQUE se manda un booleando userLoggedIn = true cuando se detecta
-             y ACTUALMENTE es como si fuera que esta logueado tan solo haciendo clic en el MENU de este componente-->
-        <ng-container *ngIf="!userLoggedIn; else isLoggedIn">
-          <a routerLink="/auth/login" routerLinkActive="active">Log In</a>
-          <a routerLink="/auth/register" routerLinkActive="active">Register</a>
-        </ng-container>
+  <nav class="nav-links">
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/products" routerLinkActive="active">Menu</a>
 
-        <ng-template #isLoggedIn>
-          <a routerLink="/orders" routerLinkActive="active">Orders</a>
+    <ng-container *ngIf="!userLoggedIn; else isLoggedIn">
+      <a routerLink="/auth/login" routerLinkActive="active">Log In</a>
+      <a routerLink="/auth/register" routerLinkActive="active">Register</a>
+    </ng-container>
 
-          <!-- TODO: ACA FALTARIA DETECTAR QUE EL USUARIO REALMENTE SE DESLOGUEÓ.. -->
-          <a routerLink="/home">Log Out</a>
-        </ng-template>
+    <ng-template #isLoggedIn>
+      <a routerLink="/orders" routerLinkActive="active">Orders</a>
 
-    </nav>
+      <a (click)="logOut()">Log Out</a>
+    </ng-template>
+
+  </nav>
 </header>
