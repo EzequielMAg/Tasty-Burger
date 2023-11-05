@@ -1,17 +1,15 @@
 <div class="product-card">
-    <!-- <img src="{{product.urlImage}}" alt=""> -->
-    <img [src]="product.urlImage" alt="">
-    <div class="product-description">
-        <h4>{{product.name}}</h4>
-        <p>{{product.description}}</p>
-        <div class="product-price-counter">
-            <p>${{product.price}}</p>
-            <div class="product-counter"> <!--componente product-counter?-->
-                <button>-</button>
-                <p>0</p>
-                <button>+</button>
-            </div>
-        </div>
+  <!-- <img src="{{product.urlImage}}" alt=""> -->
+  <img [src]="product.urlImage" alt="">
+
+  <div class="product-description">
+    <h4>{{product.name}}</h4>
+    <p>{{product.description}}</p>
+
+    <div class="product-price-counter">
+      <p>${{product.price}}</p>
+      <shared-counter></shared-counter>
     </div>
+  </div>
 
 </div>
