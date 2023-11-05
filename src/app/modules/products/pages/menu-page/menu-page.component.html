@@ -1,5 +1,3 @@
-<shared-navbar [userLoggedIn]="true"></shared-navbar>
-
 <div class="wrapper">
   <div class="title">
     <h1>MENU</h1>
@@ -7,7 +5,7 @@
   </div>
 
   <div class="menu">
-    <!--si hago de esta manera en card list no va a hacer falta un input por cada categoria 
+    <!--si hago de esta manera en card list no va a hacer falta un input por cada categoria
       y estaria reutilizando la product card list-->
     <div>
       <products-card-list [products]="productsBurguers"></products-card-list>
@@ -23,5 +21,3 @@
     <products-cart></products-cart>
   </div>
 </div>
-
-<shared-footer></shared-footer>

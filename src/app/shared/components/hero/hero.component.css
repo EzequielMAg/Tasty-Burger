@@ -13,14 +13,14 @@
     font-weight: lighter;
 }
 
-button{
+button {
     margin: 1rem 0.6rem;
     border:none;
     color: white;
     text-decoration: none;
     padding: .4rem .6rem;
     text-align: center;
-    
+
     background-color: rgb(5, 152, 98);
     border-radius: 5px;
     cursor:pointer;

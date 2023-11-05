@@ -1,3 +1,4 @@
+
 <form id="login-form" (ngSubmit)="initSession()">
   <div class="logo">
     <img src="./../../../../../assets/images/logo-sin-nombre.png" alt="">
@@ -7,12 +8,14 @@
       
     <div class="log-in">
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Ingresá tu email" required>
+        <input type="text" id="email" name="email" placeholder="Ingresá tu email" [(ngModel)]="email" required>
     </div>
 
     <div class="log-in">
         <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" placeholder="Ingresá tu contraseña" required>
+        <input type="password" id="password" name="password" placeholder="Ingresá tu contraseña" 
+               [(ngModel)]="password" required>
+
         <div class="forgot-password">
           <a>¿Olvidaste tu contraseña?</a>
         </div>
@@ -35,3 +38,4 @@
   </div>
 
 </form>
+
