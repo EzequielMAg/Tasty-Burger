@@ -6,6 +6,7 @@ import { Error404Component } from './pages/error404/error404.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { RouterModule } from '@angular/router';
+import { CounterComponent } from './components/counter/counter.component';
 
 
 
@@ -15,7 +16,9 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     Error404Component,
     HomePageComponent,
-    HeroComponent
+    HeroComponent,
+    CounterComponent,
+
   ],
   imports: [
     CommonModule,
@@ -25,7 +28,8 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     FooterComponent,
     Error404Component,
-    HomePageComponent
+    HomePageComponent,
+    CounterComponent
   ]
 })
 export class SharedModule { }
