@@ -44,39 +44,6 @@
 }
 
 
-.product-counter{
-    display: flex;
-    gap: .6rem;
-    align-items: center;
-
-
-}
-
-
-.product-counter button{
-    border:none;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    padding: 0 .6rem;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.4rem;
-    
-    background-color: rgb(51, 51, 51);
-    border-radius: 5px;
-    cursor:pointer;
-
-    min-width: 30px;
-}
-
-
-.product-counter button:active{
-    color: rgb(0, 0, 0);
-}
-.product-counter button:hover{
-    background-color: rgb(255, 127, 31);
-}
-
 @media (min-width: 1100px){
 
     .product-card img{
@@ -86,5 +53,5 @@
     .product-card{
         max-width: 15rem;
     }
-    
+
 }

@@ -21,7 +21,6 @@ import { CartModule } from '../cart/cart.module';
     ProductsRoutingModule,
     SharedModule,
     CartModule,
-
   ]
 })
 export class ProductsModule { }

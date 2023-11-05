@@ -18,7 +18,6 @@ import { CounterComponent } from './components/counter/counter.component';
     HomePageComponent,
     HeroComponent,
     CounterComponent,
-
   ],
   imports: [
     CommonModule,
@@ -29,7 +28,7 @@ import { CounterComponent } from './components/counter/counter.component';
     FooterComponent,
     Error404Component,
     HomePageComponent,
-    CounterComponent
+    CounterComponent,
   ]
 })
 export class SharedModule { }
