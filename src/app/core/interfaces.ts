@@ -1,3 +1,6 @@
+import { Category } from "./enums";
+import { Cart, Product, ProductInCart } from "./models";
+
 export interface IUser {
   id:          string;// | null;  //TODO: Revisar que pasa aca despues por haber comentado esto..
   name:        string;
@@ -5,6 +8,8 @@ export interface IUser {
   password:    string;
   phoneNumber: number;
   address:     string;
+
+  cart:        Cart;
 }
 
 export interface IProduct{
@@ -17,18 +22,14 @@ export interface IProduct{
   urlImage:    string;
 }
 
-export enum Category{
-  Burguers = "Hamburguesas",
-  SoftDrinks = "Bebidas sin alcohol",
-  Beers = "Cervezas",
-  Fries = "Frituras",
-  Desserts = "Postres",
-  Salads = "Ensaladas",
-  BurguerVeggies = "Hamburguesas Veganas"
+export interface ICart{
+  id:               string;
+  productLineArray: ProductInCart[];
+  totalToPay:       number;
 }
 
-export interface ICart{
-  productList: IProduct[],
-  cartPrice:   number,
-  payMode:     string,
+export interface IProductInCart {
+  id:       string;
+  quantity: number;
+  product:  Product;
 }
