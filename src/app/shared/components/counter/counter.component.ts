@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'shared-counter',
@@ -7,14 +7,24 @@ import { Component } from '@angular/core';
 })
 export class CounterComponent {
 
+  @Output()
+  public onCounter: EventEmitter<number> = new EventEmitter();
+
   public productCounter: number = 0;
 
+
   public decreaseCounter(): void {
+    if (this.productCounter === 0) return;
     this.productCounter--;
+    this.counterEmitter();
   }
 
-  public increaseCounter() : void {
+  public increaseCounter(): void {
     this.productCounter++;
+    this.counterEmitter();
   }
 
+  public counterEmitter(): void {
+    this.onCounter.emit(this.productCounter);
+  }
 }

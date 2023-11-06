@@ -1,40 +1,37 @@
-
-.cart-center{
-    background-color: rgb(221, 221, 221);
-    width: 17rem;
-    height: 30rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+.cart-center {
+  background-color: rgb(221, 221, 221);
+  width: 17rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.cart-empty{
-    font-size: 2rem;
-    font-weight: bold;
+.cart-empty {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-.cart{
-    background-color: rgb(51, 51, 51);
-    position: sticky;
-    top:5rem;
-    bottom: 2rem;
+.cart {
+  background-color: rgb(51, 51, 51);
+  position: sticky;
+  top: 5rem;
+  bottom: 2rem;
 
 }
 
-.cart h3{
-    text-align: center;
-    color:white;
+.cart h3 {
+  text-align: center;
+  color: white;
 }
 
-@media (min-width: 1100px){
-    .cart-center{
-        width: 24rem;
-    }
+@media (min-width: 1100px) {
+  .cart-center {
+    width: 24rem;
+  }
 }
-
-
 
 /* color: rgb(255, 127, 31); */
 
@@ -45,7 +42,7 @@ rgb(255, 190, 29); amarillo
 rgb(255, 127, 31); naranja
 rgb(221, 58, 14); naranja rojizo
 
-hamburguesa: 
+hamburguesa:
 
 pan claro: #f9a331
 pan sombra: #d47a25
@@ -61,3 +58,26 @@ base:rgb(216, 176, 154)
 
 
 */
+.cart-header {
+  display: flex;
+  justify-content: space-between; /* Separar título y botón a los lados opuestos */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.cart-title {
+  flex-grow: 1; /* Para que el título ocupe el espacio restante */
+}
+
+.fix-btn {
+  height: 1.8rem;
+  width: 1.8rem;
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  text-align: center;
+}
+
+.fix-pisition {
+  /* Añade margen a la derecha para separar el botón del borde */
+  margin-right: 10px;
+}

@@ -18,14 +18,22 @@ export class ProductCardComponent{
   constructor(private cartServcice: CartService) {}
 
   // METODO QUE RECIBE EL VALOR DEL COUNTERCOMPONENT....
-  // Y ACTUALIZA EL OBJETO: ProductLineCart....
-  // Y asigna el producto actual con el valor del counter agarrado
   public updateProductInCart(counter: number) {
+    console.log(this.product);
 
-    this.productInCart.product = this.product;
+    // Y ACTUALIZA EL OBJETO: ProductLineCart....
+    if(this.productInCart.product.id === '') {
+      // Solo se asigna una vez..
+      this.productInCart.product = this.product;
+      console.log("hola");
+    }
+
+    // Y asigna el producto actual con el valor del counter agarrado
     this.productInCart.quantity = counter;
+
+    // Y AGREGA EL OBJETO CREADO ProductLineCart EN EL CARRITO, a traves del CartService
+    this.cartServcice.updateProductInCart(this.productInCart);
   }
 
-  // METODO QUE AGREGA EL OBJETO CREADO ProductLineCart EN EL CARRITO, a traves del CartService
 
 }
