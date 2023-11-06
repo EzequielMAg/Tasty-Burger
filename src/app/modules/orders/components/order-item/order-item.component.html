@@ -1,0 +1,41 @@
+<div class="order-item">
+    <div class="principal">
+        <h4>Pedido # {{order.id}}</h4>
+        <p>Fecha de pedido:{{order.name}}</p>
+        
+    </div>
+
+    <div>
+        <h5>Tu Pedido</h5>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Importe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let productInOrder of productsInOrder; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{productInOrder.name | titlecase }} .product.name</td>
+                    <td>{{productInOrder.price}} .quantity</td>
+                    <td>{{productInOrder.price}} .product.price</td>
+                    <td>{{productInOrder.price}} quantity*product.price</td>
+    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h5>Detalles sobre la entrega</h5>
+        <p>Tipo de entrega: Delivery</p>
+        <p>Dirección: {{order.description}}</p>
+    </div>
+
+    <h5>Precio Total: {{order.price}}</h5>
+    <h5>Metodo de pago: {{order.price}}</h5>
+</div>
