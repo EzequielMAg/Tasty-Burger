@@ -15,20 +15,24 @@ export class CartService {
     return this._productLineArray;
   }
 
-  public updateProductInCart(productLine: ProductInCart): void {
+  public updateProductInCart(newProductLine: ProductInCart): void {
 
     /* console.log(productLine); */
     //TODO: validar que el producto ya esta en el carrito y solamente actualizar su cantidad...
     // Busca si el productLine ya está en el _productLineArray
-    const productoExistente = this._productLineArray.find(product => product.id === productLine.id);
-    console.log(productoExistente);
+    const existingProductLine: ProductInCart | undefined = this.findProductLine(newProductLine);
 
-    if (productoExistente) {
-      // Si el productLine ya existe, modifica su atributo quantity
-      productoExistente.quantity = productLine.quantity;
+    console.log(existingProductLine);
+
+    if (existingProductLine) {
+      // Si el productLine ya existe, se verifica si el atrib quantity es 0, y se elimina, sino se modifica tal quantity.
+      ( existingProductLine.quantity === 0 ) ?
+        this.deleteProductLine(existingProductLine) :
+        existingProductLine.quantity = newProductLine.quantity;
+
     } else {
-      // Si el productLine no existe, agrégalo al final del arreglo.
-      this._productLineArray.push(productLine);
+      // Si el productLine no existe, se agrega al final del arreglo.
+      this._productLineArray.push(newProductLine);
     }
 
     /* console.log(this._productLineArray); */
@@ -39,5 +43,19 @@ export class CartService {
     localStorage.setItem('cart', JSON.stringify(this._productLineArray)); //JSON.stringify: convierte un objeto en string
   }
 
+  private findProductLine(productLine: ProductInCart): ProductInCart | undefined {
+    return this._productLineArray.find( cart => cart.product.id === productLine.product.id );
+  }
+
+  private deleteProductLine(productLine: ProductInCart): void {
+
+    if (productLine) {
+      const index: number = this._productLineArray.indexOf(productLine);
+
+      if (index !== -1) {
+        this._productLineArray.splice(index, 1);
+      }
+    }
+  }
 
 }

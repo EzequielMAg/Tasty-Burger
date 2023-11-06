@@ -1,8 +1,25 @@
 <div class="cart">
-    <h3>Carrito</h3>
-    <div class="cart-center">
-        <i class="fa-solid fa-cart-shopping fa-2xl "></i>
-        <p class="cart-empty">Carrito vacío!</p>
+
+  <div class="cart-header">
+    <div class="cart-title">
+      <h3>Carrito</h3>
     </div>
 
+    <ng-container *ngIf="productsArray.length !== 0">
+      <button class="btn btn-danger fix-btn fix-pisition" (click)="clearCart()"> X </button>
+    </ng-container>
+  </div>
+
+  <div class="cart-center">
+
+    <ng-container *ngIf="productsArray.length === 0; else ListProductsCartComponent">
+      <i class="fa-solid fa-cart-shopping fa-2xl "></i>
+      <p class="cart-empty">Carrito vacío!</p>
+    </ng-container>
+
+    <ng-template #ListProductsCartComponent>
+      <list-products-cart></list-products-cart>
+    </ng-template>
+
+  </div>
 </div>
