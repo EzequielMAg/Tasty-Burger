@@ -1,4 +1,4 @@
-import { Category } from "./enums";
+import { Category, PayMode } from "./enums";
 import { Cart, Product, ProductInCart } from "./models";
 
 export interface IUser {
@@ -37,8 +37,8 @@ export interface IProductInCart {
 export interface IOrder{
   id: string;
   totalPaid: number;
-  payMode: string;
-  date: Date;
+  payMode: PayMode;
+  date: Date | null;
   address: string;
 
   idUser: string;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
-import { Category } from 'src/app/core/interfaces';
-import { Product } from 'src/app/core/models';
+import { Category, PayMode } from 'src/app/core/enums';
+import { Order, Product } from 'src/app/core/models';
 import { ProductsApiService } from 'src/app/core/services/json-server/products-api.service';
 
 @Component({
@@ -11,11 +11,78 @@ import { ProductsApiService } from 'src/app/core/services/json-server/products-a
 })
 export class OrdersPageComponent implements OnInit{
 
-  public orders: Product[] = [];
+  private _orders: Order[] = [{
+    id: '1',
+    totalPaid: 8300,
+    payMode: PayMode.withoutPaymentMethod,
+    date: new Date(),
+    address: "",
+    idUser: '2',
+    productLineArray: [{
+      id: '4',
+      quantity: 3,
+      product: new Product({
+        id: '12',
+        name: 'Hamburguesa Candy',
+        description: 'Probando!',
+        price: 1321,
+        urlImage: '321312',
+        category: Category.Beers
+      })
+    }, {
+      id: '10',
+      quantity: 9,
+      product: new Product({
+        id: '12',
+        name: 'Hamburguesa Tasty',
+        description: 'asdasdsdasd!',
+        price: 7551,
+        urlImage: '321312',
+        category: Category.Beers
+      })
+    }]
+  },
+  {
+    id: '3',
+    totalPaid: 2566,
+    payMode: PayMode.withoutPaymentMethod,
+    date: new Date(),
+    address: "",
+    idUser: '8',
+    productLineArray: [{
+      id: '1',
+      quantity: 10,
+      product: new Product({
+        id: '12',
+        name: 'CheeseBurguer',
+        description: 'Probandoooooooooo!',
+        price: 1321,
+        urlImage: '321312',
+        category: Category.Beers
+      })
+    }, {
+      id: '4',
+      quantity: 5,
+      product: new Product({
+        id: '12',
+        name: 'Remolacha burger',
+        description: 'Probando!',
+        price: 4000,
+        urlImage: '321312',
+        category: Category.Beers
+      })
+    }]
+  }];
+  public get orders(): Order[] {
+    return this._orders;
+  }
+  public set orders(value: Order[]) {
+    this._orders = value;
+  }
 
   constructor(private productsApiService: ProductsApiService){}
   ngOnInit(): void {
-    this.getProducts();
+    // this.getProducts();
   }
 
 
@@ -23,17 +90,6 @@ export class OrdersPageComponent implements OnInit{
 
   //*pruebo con productos, pero en realidad tendria q tener un metodo get para traer pedidos
 
-  public async getProducts() {
-    try {
-      let responseApi = this.productsApiService.getProductsByCategory(Category.Burguers);
-      const data = await lastValueFrom(responseApi);
-
-      this.orders = data.map( (productData: any) => new Product(productData) );
-
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
 
   //*realizar metodo para traer los productos q se encuentran en el pedido, Class: ProductInCart
