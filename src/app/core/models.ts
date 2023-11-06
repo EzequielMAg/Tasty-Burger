@@ -2,67 +2,104 @@ import { v4 as uuid} from 'uuid';
 import { ICart, IProduct, IProductInCart, IUser } from './interfaces';
 import { Category, PayMode } from './enums';
 
-export class User implements IUser{
-  id:           string;
-  name:         string;
-  email:        string;
-  password:     string;
-  phoneNumber:  number;
-  address:      string;
+export class User implements IUser {
+  public id:           string;
+  public name:         string;
+  public email:        string;
+  public password:     string;
+  public phoneNumber:  number;
+  public address:      string;
 
-  cart:         Cart;
+  public cart:         Cart;
 
-  constructor(user?: any){
-    this.id = user.id === undefined ? uuid() : user.id ;
-    this.name = user.name === undefined ? null : user.name;
-    this.email = user.email === undefined ? null : user.email;
-    this.password = user.password === undefined ? null : user.password;
-    this.phoneNumber = user.phoneNumber === undefined ? null : user.phoneNumber;
-    this.address = user.address === undefined ? null : user.address;
+  constructor(user?: User) {
+    if (user) {
+      // Si por x razon cada atributo del usuario es falsy, se inicializa por default
+      // o se asignan el valor de lso atributos del usuario que se paso por argumento
+      this.id = user.id || '';
+      this.name = user.name || '';
+      this.email = user.email || '';
+      this.password = user.password || '';
+      this.phoneNumber = user.phoneNumber || 0;
+      this.address = user.address || '';
+      this.cart = user.cart || new Cart();
 
-    this.cart = user.cart === undefined ? null : user.cart;
+    } else {
+      // Si no se pasa un usuario, inicializa las propiedades a valores por defecto o vacíos
+      this.id = '';
+      this.name = '';
+      this.email = '';
+      this.password = '';
+      this.phoneNumber = 0;
+      this.address = '';
+      this.cart = new Cart();
+    }
   }
 }
 
 export class Product implements IProduct{
-  id:           string;
-  name:         string;
-  price:        number;
-  description:  string;
-  category:     Category;
-  urlImage:     string;
+  public id:           string;
+  public name:         string;
+  public price:        number;
+  public description:  string;
+  public category:     Category;
+  public urlImage:     string;
 
-  constructor(product?: any){
-    this.id = product.id === undefined ? uuid() : product.id;
-    this.name = product.name === undefined ? null :  product.name;
-    this.price = product.price === undefined ? null : product.price;
-    this.description = product.description === undefined ? null : product.description;
-    this.urlImage = product.urlImage === undefined ? null : product.urlImage;
-    this.category = product.category === undefined ? null : product.category;
+  constructor(product?: Product) {
+    if (product) {
+      this.id = product.id || '';
+      this.name = product.name || '';
+      this.price = product.price || 0;
+      this.description = product.description || '';
+      this.category = product.category || null;
+      this.urlImage = product.urlImage || '';
+
+    } else {
+      this.id = '';
+      this.name = '';
+      this.price = 0;
+      this.description = '';
+      this.category = Category.WithoutCategory;
+      this.urlImage = '';
+    }
   }
 }
 
 
 export class Cart implements ICart {
-  id:               string;
-  productLineArray: ProductInCart[];
-  totalToPay:       number;
+  public id:               string;
+  public productLineArray: ProductInCart[];
+  public totalToPay:       number;
 
-  constructor(cart?: any){
-    this.id = cart.id === undefined ? uuid() : cart.id ;
-    this.totalToPay = cart.totalToPay === undefined ? null : cart.totalToPay;
-    this.productLineArray = cart.productLineArray === undefined ? null : cart.productLineArray;
+  constructor(cart?: Cart) {
+    if (cart) {
+      this.id = cart.id || '';
+      this.productLineArray = cart.productLineArray || [];
+      this.totalToPay = cart.totalToPay || 0;
+
+    } else {
+      this.id = '';
+      this.productLineArray = [];
+      this.totalToPay = 0;
+    }
   }
 }
 
 export class ProductInCart implements IProductInCart {
-  id:       string;
-  quantity: number;
-  product:  Product;
+  public id:       string;
+  public quantity: number;
+  public product:  Product;
 
-  constructor(productInCart?: any){
-    this.id = productInCart.id === undefined ? uuid() : productInCart.id ;
-    this.quantity = productInCart.quantity === undefined ? null : productInCart.quantity;
-    this.product = productInCart.product === undefined ? null : productInCart.product;
+  constructor(productInCart?: any) {
+    if (productInCart) {
+      this.id = productInCart.id || '';
+      this.quantity = productInCart.quantity || 0;
+      this.product = productInCart.product || new Product();
+
+    } else {
+      this.id = '';
+      this.quantity = 0;
+      this.product = new Product();
+    }
   }
 }
