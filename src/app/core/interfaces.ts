@@ -33,3 +33,22 @@ export interface IProductInCart {
   quantity: number;
   product:  Product;
 }
+
+export interface IOrder{
+  id: string;
+  totalPaid: number;
+  payMode: string;
+  date: Date;
+  address: string;
+
+  idUser: string;
+  productLineArray: IProductInOrder[];
+}
+
+
+export interface IProductInOrder{
+  id: string;
+  quantity: number;
+  product: Product;
+  
+}

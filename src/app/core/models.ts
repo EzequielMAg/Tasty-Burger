@@ -1,5 +1,5 @@
 import { v4 as uuid} from 'uuid';
-import { ICart, IProduct, IProductInCart, IUser } from './interfaces';
+import { ICart, IOrder, IProduct, IProductInCart, IUser } from './interfaces';
 import { Category, PayMode } from './enums';
 
 export class User implements IUser {
@@ -86,6 +86,59 @@ export class Cart implements ICart {
 }
 
 export class ProductInCart implements IProductInCart {
+  public id:       string;
+  public quantity: number;
+  public product:  Product;
+
+  constructor(productInCart?: any) {
+    if (productInCart) {
+      this.id = productInCart.id || '';
+      this.quantity = productInCart.quantity || 0;
+      this.product = productInCart.product || new Product();
+
+    } else {
+      this.id = '';
+      this.quantity = 0;
+      this.product = new Product();
+    }
+  }
+}
+
+export class Order implements IOrder {
+  public id:               string;
+  public totalPaid:       number;
+  public payMode:          string;
+  public date:             Date;
+  public address:          string;
+
+  public idUser:           string;
+  public productLineArray: ProductInOrder[];
+
+  constructor(order?: Order) {
+    if (order) {
+      this.id = order.id || '';
+      this.totalPaid = order.totalPaid || 0;
+      this.payMode = order.payMode || '';
+      this.date = order.date || new Date();
+      this.address = order.address || '';
+      
+      this.productLineArray = order.productLineArray || [];
+      this.idUser = order.idUser || '';
+
+
+    } else {
+      this.id = '';
+      this.productLineArray = [];
+      this.totalPaid = 0;
+      this.payMode = '';
+      this.date = new Date();
+      this.address = '';
+      this.idUser = '';
+    }
+  }
+}
+
+export class ProductInOrder implements IProductInCart {
   public id:       string;
   public quantity: number;
   public product:  Product;
