@@ -16,7 +16,7 @@ export class OrdersPageComponent implements OnInit{
     totalPaid: 8300,
     payMode: PayMode.withoutPaymentMethod,
     date: new Date(),
-    address: "",
+    address: "New York 123",
     idUser: '2',
     productLineArray: [{
       id: '4',
@@ -47,7 +47,7 @@ export class OrdersPageComponent implements OnInit{
     totalPaid: 2566,
     payMode: PayMode.withoutPaymentMethod,
     date: new Date(),
-    address: "",
+    address: "New York 123",
     idUser: '8',
     productLineArray: [{
       id: '1',

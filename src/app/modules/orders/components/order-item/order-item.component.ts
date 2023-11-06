@@ -10,4 +10,6 @@ export class OrderItemComponent {
   @Input()
   public order: Order = new Order();
 
+  public panelOpenState: boolean = false;
+
 }
