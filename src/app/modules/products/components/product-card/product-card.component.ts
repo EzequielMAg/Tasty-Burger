@@ -15,7 +15,7 @@ export class ProductCardComponent{
 
   public productInCart: ProductInCart = new ProductInCart();
 
-  constructor(private cartServcice: CartService) {}
+  constructor(private cartService: CartService) {}
 
   // METODO QUE RECIBE EL VALOR DEL COUNTERCOMPONENT....
   public updateProductInCart(counter: number) {
@@ -32,8 +32,10 @@ export class ProductCardComponent{
     this.productInCart.quantity = counter;
 
     // Y AGREGA EL OBJETO CREADO ProductLineCart EN EL CARRITO, a traves del CartService
-    this.cartServcice.updateProductInCart(this.productInCart);
+    this.cartService.updateProductInCart(this.productInCart);
   }
 
-
+  get productLineQuantity(): number | undefined {
+    return this.cartService.getQuantityProductLineByIdProduct(this.product.id);
+  }
 }

@@ -7,12 +7,12 @@ import { ProductInCart } from '../models';
 export class CartService {
 
   // Va contener todos los productos del carrito c/u con su cantidad (objeto ProductInCart)
-  private _productLineArray: ProductInCart[] = [];
+  private _cart: ProductInCart[] = [];
 
   constructor() { }
 
-  get productLineArray(): ProductInCart[] {
-    return this._productLineArray;
+  get cart(): ProductInCart[] {
+    return this._cart;
   }
 
   public updateProductInCart(newProductLine: ProductInCart): void {
@@ -32,7 +32,7 @@ export class CartService {
 
     } else {
       // Si el productLine no existe, se agrega al final del arreglo.
-      this._productLineArray.push(newProductLine);
+      this._cart.push(newProductLine);
     }
 
     /* console.log(this._productLineArray); */
@@ -40,22 +40,33 @@ export class CartService {
   }
 
   private saveLocalStorage(): void {
-    localStorage.setItem('cart', JSON.stringify(this._productLineArray)); //JSON.stringify: convierte un objeto en string
+    localStorage.setItem('cart', JSON.stringify(this._cart)); //JSON.stringify: convierte un objeto en string
   }
 
   private findProductLine(productLine: ProductInCart): ProductInCart | undefined {
-    return this._productLineArray.find( cart => cart.product.id === productLine.product.id );
+    return this._cart.find( cart => cart.product.id === productLine.product.id );
   }
 
   private deleteProductLine(productLine: ProductInCart): void {
 
     if (productLine) {
-      const index: number = this._productLineArray.indexOf(productLine);
+      const index: number = this._cart.indexOf(productLine);
 
       if (index !== -1) {
-        this._productLineArray.splice(index, 1);
+        this._cart.splice(index, 1);
       }
     }
   }
 
+  public clearCart(): void {
+    this._cart = [];
+  }
+
+  public getQuantityProductLineByIdProduct(id: string): number {
+    const result = this._cart.find( cart => cart.product.id === id );
+
+    if(result?.quantity === undefined) return 0;
+
+    return result?.quantity;
+  }
 }

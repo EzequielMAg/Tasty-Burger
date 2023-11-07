@@ -31,6 +31,10 @@
   .cart-center {
     width: 24rem;
   }
+
+  .content-cart {
+    width: 24rem;
+  }
 }
 
 /* color: rgb(255, 127, 31); */
@@ -80,4 +84,21 @@ base:rgb(216, 176, 154)
 .fix-pisition {
   /* Añade margen a la derecha para separar el botón del borde */
   margin-right: 10px;
+}
+
+list-products-cart {
+  /* height: 380px; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 84px;
+  /* margin-top: 8px; */
+}
+
+.content-cart {
+  background-color: rgb(221, 221, 221);
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }

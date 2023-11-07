@@ -1,0 +1,34 @@
+.product-price-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 0 .5rem 0;
+
+}
+
+.product-price-counter p {
+  margin: 0;
+  margin-left: .5rem;
+  font-size: 1.05rem;
+}
+
+.my-container {
+  padding-top: .5rem;
+  border-bottom: 1px solid #000;
+}
+
+.my-container h5 {
+  font-size: 1rem;
+  margin-bottom: .3rem;
+  margin-left: .5rem;
+}
+
+.description {
+  margin: 0;
+  font-size: .8rem;
+  margin-left: .5rem;
+}
+
+shared-counter {
+  margin-right: .5rem;
+}

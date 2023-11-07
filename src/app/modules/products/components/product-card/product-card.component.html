@@ -7,8 +7,8 @@
     <p>{{product.description}}</p>
 
     <div class="product-price-counter">
-      <p>${{product.price}}</p>
-      <shared-counter (onCounter)="updateProductInCart($event)"></shared-counter>
+      <p>$ {{product.price}}</p>
+      <shared-counter [productCounter]="productLineQuantity!" (onCounter)="updateProductInCart($event)"></shared-counter>
     </div>
   </div>
 

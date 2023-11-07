@@ -1,1 +1,10 @@
-<p>product-in-cart works!</p>
+<div class="my-container">
+  <h5> {{ productLine.product.name }} </h5>
+
+  <p class="description"> {{ productLine.product.description }} </p>
+
+  <div class="product-price-counter">
+    <p>$ {{ productLine.product.price }}</p>
+    <shared-counter [productCounter]="productLine.quantity" (onCounter)="updateProductLine($event)"></shared-counter>
+  </div>
+</div>

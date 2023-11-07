@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Category } from 'src/app/core/interfaces';
+import { Category } from 'src/app/core/enums';
 import { Product } from 'src/app/core/models';
 
 @Component({
@@ -9,7 +9,7 @@ import { Product } from 'src/app/core/models';
 })
 export class OrderItemComponent {
   @Input()
-  public order: Product = new Product({id:'1'})
+  public order: Product = new Product()
 
   public productsInOrder: Product[] = [{
     id:'12',
