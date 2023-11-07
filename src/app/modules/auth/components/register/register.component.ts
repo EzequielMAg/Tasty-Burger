@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
 })
 export class RegisterComponent {
 
-  public user: User = new User({id:null});
+  public user: User = new User();
   public passwordConfirm: string = '';
 
   constructor(private authService: AuthService, private router: Router){}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Product } from 'src/app/core/models';
+import { Product, ProductInCart } from 'src/app/core/models';
+import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
   selector: 'products-cart',
@@ -8,11 +9,14 @@ import { Product } from 'src/app/core/models';
 })
 export class SideCartComponent {
 
-  /* public productsArray: Product[] = []; */
-  public productsArray: Product[] | string[] = ["asd"];
+  constructor(private cartService: CartService) { }
 
   public clearCart(): void {
-    this.productsArray = [];
+    this.cartService.clearCart();
+  }
+
+  get cart(): ProductInCart[] {
+    return this.cartService.cart;
   }
 
 }

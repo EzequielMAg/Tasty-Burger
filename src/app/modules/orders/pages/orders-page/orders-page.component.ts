@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
-import { Category } from 'src/app/core/interfaces';
+import { Category } from 'src/app/core/enums';
 import { Product } from 'src/app/core/models';
 import { ProductsApiService } from 'src/app/core/services/json-server/products-api.service';
 
