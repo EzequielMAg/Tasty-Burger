@@ -3,9 +3,10 @@
                             (closed)="panelOpenState=false">
 
         <mat-expansion-panel-header>
+
             <div class="principal">
                 <h4>Pedido # {{order.id}}</h4>
-                <p>Fecha de pedido: {{order.date?.toLocaleDateString()}} 
+                <p>Fecha de pedido {{order.date?.toLocaleDateString()}} 
                     <span>{{order.date?.toLocaleTimeString()}}</span> 
                 </p>
                 
@@ -13,39 +14,70 @@
 
         </mat-expansion-panel-header>
         <div class="order-detail">
-            <h5>
-                Tu Pedido
+            <h5 class="separator">
+                Tu pedido
             </h5>
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nombre</th>
-                        <th>Cantidad</th>
-                        <th>Precio Unitario</th>
-                        <th>Importe</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let productInOrder of order.productLineArray; let i = index">
-                        <td>{{i + 1}}</td>
-                        <td>{{productInOrder.product.name | titlecase }} </td>
-                        <td>{{productInOrder.quantity}}</td>
-                        <td>$ {{productInOrder.product.price}}</td>
-                        <td>$ {{productInOrder.quantity * productInOrder.product.price | number}}</td>
+
+            <div *ngFor="let productInOrder of order.productLineArray; let i = index">
+                <div class="product-detail">
+                    <div class="left-side">
+                        <div class="image-section">
+                            <img src="{{productInOrder.product.urlImage}}" alt="">
+                        </div>
+                        <div class="description-section">
+                            <h6>{{productInOrder.product.name}}</h6>
+                            <p>{{productInOrder.product.description}}</p>
+                        </div>
                         
-                    </tr>
-                </tbody>
-            </table>
-            <div>
-                <h5>Detalles sobre la entrega</h5>
-                <p>Tipo de entrega: Delivery</p>
-                <p>Dirección: {{order.address}}</p>
+                    </div>
+
+                    <div class="amount-section">
+                        <span>{{productInOrder.quantity}}x</span>
+                        <span>$ {{productInOrder.product.price}}</span>
+                    </div>
+                    
+                </div>
+                <hr>
+
             </div>
-        
-            <h5>Precio Total: $ {{order.totalPaid}}</h5>
-            <h5>Metodo de pago: {{order.payMode}}</h5>
-    </div>
+
+            <div class="separator">
+                <h5>Detalles sobre la entrega</h5>
+                <div class="delivery-detail">
+                    <div class="delivery-detail-item">
+                        <div class="icon">
+                            <i class="fa-solid fa-motorcycle"></i>
+                        </div>
+                        <div>
+                            <p>Tipo de entrega</p>
+                            <span>Delivery</span>
+                        </div>
+                        <hr>
+                    </div>
+                    
+                    <div class="delivery-detail-item">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p>Dirección</p>
+                            <span>{{order.address}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="separator total-item">
+                <h5>Total</h5>
+                <h5>$ {{order.totalPaid}}</h5>
+            </div>
+
+            <div class="separator method-item">
+                <h5>Metodo de pago</h5>
+                <h5>{{order.payMode}}</h5>
+
+            </div>
+        </div>
     </mat-expansion-panel>
 </mat-accordion>
         

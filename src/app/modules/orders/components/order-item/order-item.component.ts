@@ -11,5 +11,13 @@ export class OrderItemComponent {
   public order: Order = new Order();
 
   public panelOpenState: boolean = false;
+  public prueba(){
+    const date = new Date(); // Obtiene la fecha actual
+
+    const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "2-digit" };
+    const formattedDate = date.toLocaleDateString(undefined, options);
+    
+    console.log(formattedDate); 
+  }
 
 }

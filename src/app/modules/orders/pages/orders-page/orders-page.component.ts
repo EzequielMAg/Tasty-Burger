@@ -26,7 +26,7 @@ export class OrdersPageComponent implements OnInit{
         name: 'Hamburguesa Candy',
         description: 'Probando!',
         price: 1321,
-        urlImage: '321312',
+        urlImage: "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fc05518c7-e67c-4003-be76-6e1d4814715a?alt=media",
         category: Category.Beers
       })
     }, {
@@ -37,7 +37,7 @@ export class OrdersPageComponent implements OnInit{
         name: 'Hamburguesa Tasty',
         description: 'asdasdsdasd!',
         price: 7551,
-        urlImage: '321312',
+        urlImage: "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fc05518c7-e67c-4003-be76-6e1d4814715a?alt=media",
         category: Category.Beers
       })
     }]
@@ -57,7 +57,7 @@ export class OrdersPageComponent implements OnInit{
         name: 'CheeseBurguer',
         description: 'Probandoooooooooo!',
         price: 1321,
-        urlImage: '321312',
+        urlImage: "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fc05518c7-e67c-4003-be76-6e1d4814715a?alt=media",
         category: Category.Beers
       })
     }, {
@@ -68,7 +68,7 @@ export class OrdersPageComponent implements OnInit{
         name: 'Remolacha burger',
         description: 'Probando!',
         price: 4000,
-        urlImage: '321312',
+        urlImage: "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2Fc05518c7-e67c-4003-be76-6e1d4814715a?alt=media",
         category: Category.Beers
       })
     }]
