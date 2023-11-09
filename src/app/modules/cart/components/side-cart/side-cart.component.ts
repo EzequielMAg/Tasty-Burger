@@ -19,4 +19,8 @@ export class SideCartComponent {
     return this.cartService.cart;
   }
 
+  get totalToPay(): number {
+    return this.cartService.totalToPay;
+  }
+
 }

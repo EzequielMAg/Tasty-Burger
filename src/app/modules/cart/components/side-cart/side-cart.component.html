@@ -17,6 +17,15 @@
 
   <ng-template #ListProductsCartComponent>
     <list-products-cart [cart]="cart" class="content-cart"></list-products-cart>
+
+    <div class="total-to-pay">
+      <strong class="cart-price mx-2">
+        Total: $ {{ totalToPay }}
+      </strong>
+      <a href="">
+        <button class="cart-checkout-btn">GO TO CART</button>
+      </a>
+    </div>
   </ng-template>
 
 
@@ -32,14 +41,6 @@
   </ng-template>
 
 </div> -->
-
-</div>
-
-
-
-
-
-
 
 
 
