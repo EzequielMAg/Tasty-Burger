@@ -6,8 +6,7 @@
 
             <div class="principal">
                 <h4>Pedido # {{order.id}}</h4>
-                <p>Fecha de pedido {{order.date?.toLocaleDateString()}} 
-                    <span>{{order.date?.toLocaleTimeString()}}</span> 
+                <p>Fecha de pedido: {{formatDate(order.date)}} 
                 </p>
                 
             </div>

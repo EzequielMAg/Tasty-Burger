@@ -11,13 +11,23 @@ export class OrderItemComponent {
   public order: Order = new Order();
 
   public panelOpenState: boolean = false;
-  public prueba(){
-    const date = new Date(); // Obtiene la fecha actual
 
-    const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "2-digit" };
-    const formattedDate = date.toLocaleDateString(undefined, options);
+  public formatDate(date: Date | null): string{
+    if(!date){
+      return "Sin fecha"
+    }
+
+    const options: Intl.DateTimeFormatOptions = {
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit",
+    };
+
+    return new Intl.DateTimeFormat("es-ES", options).format(date).replace(',', '').concat(" hs");
     
-    console.log(formattedDate); 
+   
   }
 
 }
