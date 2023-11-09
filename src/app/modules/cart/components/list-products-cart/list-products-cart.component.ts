@@ -12,19 +12,4 @@ export class ListProductsCartComponent {
   @Input()
   public cart: ProductInCart[] = [];
 
-
-  public calculateTotalToPay() {
-
-    let totalToPay = this.cart.reduce( (total, productInCart) => {
-
-      const productPrice: number = productInCart.product.price;
-      const quantity: number = productInCart.quantity;
-      const subtotal: number = productPrice * quantity;
-
-      return total + subtotal;
-    }, 0);
-
-    return totalToPay;
-  }
-
 }

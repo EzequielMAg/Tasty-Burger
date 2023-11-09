@@ -9,16 +9,20 @@ export class CartService {
   // Va contener todos los productos del carrito c/u con su cantidad (objeto ProductInCart)
   private _cart: ProductInCart[] = [];
 
+  private _totalToPay: number = 0;
+
   constructor() { }
 
   get cart(): ProductInCart[] {
     return this._cart;
   }
 
+  get totalToPay(): number {
+    return this._totalToPay;
+  }
+
   public updateProductInCart(newProductLine: ProductInCart): void {
 
-    /* console.log(productLine); */
-    //TODO: validar que el producto ya esta en el carrito y solamente actualizar su cantidad...
     // Busca si el productLine ya está en el _productLineArray
     const existingProductLine: ProductInCart | undefined = this.findProductLine(newProductLine);
 
@@ -35,8 +39,10 @@ export class CartService {
       this._cart.push(newProductLine);
     }
 
-    /* console.log(this._productLineArray); */
     this.saveLocalStorage();
+
+    // Actualiza el total a pagar
+    this._totalToPay = this.calculateTotalToPay();
   }
 
   private saveLocalStorage(): void {
@@ -68,5 +74,19 @@ export class CartService {
     if(result?.quantity === undefined) return 0;
 
     return result?.quantity;
+  }
+
+  private calculateTotalToPay(): number {
+
+    let totalToPay: number = this.cart.reduce( (total, productInCart) => {
+
+      const productPrice: number = productInCart.product.price;
+      const quantity: number = productInCart.quantity;
+      const subtotal: number = productPrice * quantity;
+
+      return total + subtotal;
+    }, 0);
+
+    return totalToPay;
   }
 }
