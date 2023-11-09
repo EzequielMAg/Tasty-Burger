@@ -1,38 +1,38 @@
-
-.hero img{
-    width: auto;
-    height: 10rem;
+.hero img {
+  width: auto;
+  height: 10rem;
 }
 
-.hero{
-    margin: 9rem 3rem;
-    color:white;
+.hero {
+  margin: 9rem 3rem;
+  color: white;
 }
 
-.slogan{
-    font-weight: lighter;
+.slogan {
+  font-weight: lighter;
 }
 
-button {
-    margin: 1rem 0.6rem;
-    border:none;
-    color: white;
-    text-decoration: none;
-    padding: .4rem .6rem;
-    text-align: center;
+.hero button {
+  margin: 1rem 0.6rem;
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding: .4rem .6rem;
+  text-align: center;
 
-    background-color: rgb(5, 152, 98);
-    border-radius: 5px;
-    cursor:pointer;
-}
-
-
-button:active{
-    color: rgb(0, 0, 0);
-}
-button:hover{
-    background-color: rgb(15, 109, 75);
+  background-color: rgb(5, 152, 98);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 
+.hero button:active {
+  color: rgb(0, 0, 0);
+}
+
+.hero button:hover {
+  background-color: #0f6d4b;
+  -webkit-filter: drop-shadow(0 0 8px #0f6d4b);
+  filter: drop-shadow(0 0 8px #0f6d4b);
+}
 
