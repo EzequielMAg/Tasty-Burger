@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Product } from 'src/app/core/models';
+import { Order } from 'src/app/core/models';
 
 @Component({
   selector: 'orders-list',
@@ -9,6 +9,6 @@ import { Product } from 'src/app/core/models';
 export class OrdersListComponent {
 
   @Input() 
-  public orders: Product[] = [];
+  public orders: Order[] = [];
 
 }

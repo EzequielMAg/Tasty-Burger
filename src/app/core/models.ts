@@ -107,8 +107,8 @@ export class ProductInCart implements IProductInCart {
 export class Order implements IOrder {
   public id:               string;
   public totalPaid:       number;
-  public payMode:          string;
-  public date:             Date;
+  public payMode:          PayMode;
+  public date:             Date | null;
   public address:          string;
 
   public idUser:           string;
@@ -118,7 +118,7 @@ export class Order implements IOrder {
     if (order) {
       this.id = order.id || '';
       this.totalPaid = order.totalPaid || 0;
-      this.payMode = order.payMode || '';
+      this.payMode = order.payMode || null;
       this.date = order.date || new Date();
       this.address = order.address || '';
       
@@ -130,8 +130,8 @@ export class Order implements IOrder {
       this.id = '';
       this.productLineArray = [];
       this.totalPaid = 0;
-      this.payMode = '';
-      this.date = new Date();
+      this.payMode = PayMode.withoutPaymentMethod;
+      this.date = null;
       this.address = '';
       this.idUser = '';
     }
