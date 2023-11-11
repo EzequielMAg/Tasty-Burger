@@ -52,7 +52,6 @@ export class MenuPageComponent implements OnInit {
   }
 
   public async getProductsByCategory(category : Category) {
-    console.log(category);
     try {
       let responseApi = this.productsApiService.getProductsByCategory(category);
       const data = await lastValueFrom(responseApi);
