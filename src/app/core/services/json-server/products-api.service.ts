@@ -34,7 +34,6 @@ export class ProductsApiService {
   }
 
   public getProductsByCategory(category: Category): Observable<Product[]> {
-    console.log(category);
     return this.http.get<Product[]>(`${this.baseURL}?category=${category}`);
   }
 }

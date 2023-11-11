@@ -5,6 +5,7 @@ import { OrdersRoutingModule } from './orders-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { OrdersListComponent } from './components/orders-list/orders-list.component';
 import { OrderItemComponent } from './components/order-item/order-item.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 
@@ -18,6 +19,7 @@ import { OrderItemComponent } from './components/order-item/order-item.component
     CommonModule,
     OrdersRoutingModule,
     SharedModule,
+    MatExpansionModule,
   ]
 })
 export class OrdersModule { }
