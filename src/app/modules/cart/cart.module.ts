@@ -6,7 +6,6 @@ import { ListProductsCartComponent } from './components/list-products-cart/list-
 import { ProductInCartComponent } from './components/product-in-cart/product-in-cart.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
-import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.component';
 import { RouterModule } from '@angular/router';
 
 
@@ -17,18 +16,15 @@ import { RouterModule } from '@angular/router';
     ListProductsCartComponent,
     ProductInCartComponent,
     CartPageComponent,
-    CheckoutPageComponent,
-
   ],
   imports: [
     CommonModule,
     CartRoutingModule,
     SharedModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     SideCartComponent,
-
   ]
 })
 export class CartModule { }
