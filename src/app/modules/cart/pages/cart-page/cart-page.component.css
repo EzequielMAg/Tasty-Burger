@@ -1,0 +1,54 @@
+.wrapper{
+    background-image: url('./../../../../../assets/images/patron-prueba6.png');
+    background-repeat: repeat;
+    padding: .5rem 1.3rem 1.5rem 1.3rem;
+}
+
+h1{
+    background: linear-gradient(-45deg, #ff7c00 0%, rgb(221, 58, 14) 100%);
+    color:white;
+    text-align: center;
+     
+ }
+
+.title{
+    margin-top:4rem;
+}
+
+.cart-details{
+    /* margin: 0 .5rem; */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1.5rem 3rem 0 3rem;
+    padding: .5rem 0;
+}
+
+.cart-empty{
+    padding: 8rem;
+    text-align: center;
+}
+
+.cart-empty i{
+    padding: 2rem;
+}
+
+.total-pay{
+    font-weight: bold;
+    margin: .5rem .5rem;
+}
+
+.btn{
+    border: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(51, 51, 51);
+    
+    margin: 0 auto;
+    
+}
+
+  
+.btn:hover {
+    background-color: rgb(255, 127, 31);
+}
