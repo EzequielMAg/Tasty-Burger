@@ -1,0 +1,69 @@
+.wrapper{
+    background-image: url('./../../../../../assets/images/patron-prueba6.png');
+    background-repeat: repeat;
+    padding: .5rem 1.3rem 1.5rem 1.3rem;
+}
+
+h1{
+    background: linear-gradient(-45deg, #ff7c00 0%, rgb(221, 58, 14) 100%);
+    color:white;
+    text-align: center;
+     
+ }
+
+.title{
+    margin-top:4rem;
+}
+
+.delivery{
+    /* margin: 0 .5rem; */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1.5rem 3rem 0 3rem;
+    padding: .5rem 0;
+}
+
+.delivery h4{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.delivery-details{
+    display: flex;
+    flex-direction: column;
+    /* gap: 1.5rem;  */
+    padding: 2rem 2rem;
+}
+
+.delivery-details-item{
+    /* margin-top: 2rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.separator{
+    border-top: 0.5rem solid #ede9e9;
+    padding-top: 1rem;
+}
+
+.btn{
+    border: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(51, 51, 51);
+    
+}
+
+  
+.btn:hover {
+    background-color: rgb(255, 127, 31);
+}
+
+
+
+.send-order{
+    margin: 0 auto;
+    /* width: 30%; */
+}
