@@ -11,6 +11,9 @@ export class CartService {
 
   private _totalToPay: number = 0;
 
+  //TODO: variable q indica si esta en la page cart o en el menupage, para que el carrito cambie de estilos
+  private _inPageCart: boolean = false;
+
   constructor() { }
 
   get cart(): ProductInCart[] {
@@ -19,6 +22,10 @@ export class CartService {
 
   get totalToPay(): number {
     return this._totalToPay;
+  }
+
+  get inPageCart(): boolean {
+    return this._inPageCart;
   }
 
   public updateProductInCart(newProductLine: ProductInCart): void {
