@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()" class="send-order-dialog">
+    <h4>¡Pedido realizado!</h4>
+    <div>
+        <h5>Su pedido se encuentra en preparación</h5>
+        <i class="fa-solid fa-burger fa-flip fa-2xl" style="color: #ff7f1f;"></i>
+
+    </div>
+    
+    <div class="btn-group">
+       <button routerLink="/products" class="e-btn" type="submit" id="save-changes">¡OK!</button>
+       <button class="e-btn" (click)="closeDialog()" id="cancel">Cancelar</button>
+    </div>
+  </form>
