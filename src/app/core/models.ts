@@ -93,11 +93,11 @@ export class ProductLine implements IProductLine {
   public quantity: number;
   public idProduct:  string;
 
-  constructor(productInCart?: any) {
-    if (productInCart) {
-      this.id = productInCart.id || '';
-      this.quantity = productInCart.quantity || 0;
-      this.idProduct = productInCart.idProduct || '';
+  constructor(productLine?: any) {
+    if (productLine) {
+      this.id = productLine.id || '';
+      this.quantity = productLine.quantity || 0;
+      this.idProduct = productLine.idProduct || '';
 
     } else {
       this.id = '';

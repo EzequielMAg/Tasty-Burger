@@ -107,7 +107,9 @@ export class ProductsService {
 
     //Recorrer todos los arreglos hasta encontrar el producto
     product = this._productsBurguers.find((p) => p.id === idProduct);
-    if (product) return product;
+    if (product) {
+      return product;
+    }
 
     product = this._productsBurguerVeggies.find((p) => p.id === idProduct);
     if (product) return product;

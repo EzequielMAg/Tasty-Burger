@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProductInCart } from 'src/app/core/models';
+import { Product, ProductLine } from 'src/app/core/models';
 import { CartService } from '../../../../core/services/cart.service';
+import { ProductsService } from 'src/app/core/services/products.service';
 
 @Component({
   selector: 'product-in-cart',
@@ -10,22 +11,26 @@ import { CartService } from '../../../../core/services/cart.service';
 export class ProductInCartComponent implements OnInit {
 
   @Input()
-  public productLine!: ProductInCart;
+  public productInCart!: ProductLine;
 
-constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private productService: ProductsService) {}
 
   ngOnInit(): void {
-    if( !this.productLine ) throw new Error('productLine property is required');
+    if( !this.productInCart ) throw new Error('productLine property is required');
+  }
+
+  get product(): Product {
+    return this.productService.getProductById(this.productInCart.idProduct)!;
   }
 
   // METODO QUE RECIBE EL VALOR DEL COUNTERCOMPONENT....
-  public updateProductLine(counter: number) {
+  public updateProductFromCart(counter: number) {
 
     // Y asigna el producto actual con el valor del counter agarrado
-    this.productLine.quantity = counter;
+    this.productInCart.quantity = counter;
 
-    // Y AGREGA EL OBJETO CREADO ProductLineCart EN EL CARRITO, a traves del CartService
-    this.cartService.updateProductInCart(this.productLine);
+    // Y AGREGA EL OBJETO CREADO ProductLine EN EL CARRITO, a traves del CartService
+    this.cartService.updateProductFromCart(this.productInCart);
   }
 
 }

@@ -1,22 +1,24 @@
 import { Injectable } from '@angular/core';
-import { ProductInCart } from '../models';
+import { ProductLine, Product } from '../models';
+import { ProductsService } from './products.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  // Va contener todos los productos del carrito c/u con su cantidad (objeto ProductInCart)
-  private _cart: ProductInCart[] = [];
+  // Va contener todos los productos del carrito c/u con su cantidad (objeto ProductLine)
+  private _cart: ProductLine[] = [];
 
   private _totalToPay: number = 0;
 
   //TODO: variable q indica si esta en la page cart o en el menupage, para que el carrito cambie de estilos
   private _inPageCart: boolean = false;
 
-  constructor() { }
+  constructor(private productService: ProductsService) { }
 
-  get cart(): ProductInCart[] {
+  //#region GETTERS
+  get cart(): ProductLine[] {
     return this._cart;
   }
 
@@ -27,23 +29,22 @@ export class CartService {
   get inPageCart(): boolean {
     return this._inPageCart;
   }
+  //#endregion
 
-  public updateProductInCart(newProductLine: ProductInCart): void {
+  public updateProductFromCart(newProductInCart: ProductLine): void {
 
     // Busca si el productLine ya está en el _productLineArray
-    const existingProductLine: ProductInCart | undefined = this.findProductLine(newProductLine);
-
-    console.log(existingProductLine);
+    const existingProductLine: ProductLine | undefined = this.findProductInCart(newProductInCart);
 
     if (existingProductLine) {
       // Si el productLine ya existe, se verifica si el atrib quantity es 0, y se elimina, sino se modifica tal quantity.
       ( existingProductLine.quantity === 0 ) ?
-        this.deleteProductLine(existingProductLine) :
-        existingProductLine.quantity = newProductLine.quantity;
+        this.deleteProductFromCart(existingProductLine) :
+        existingProductLine.quantity = newProductInCart.quantity;
 
     } else {
       // Si el productLine no existe, se agrega al final del arreglo.
-      this._cart.push(newProductLine);
+      this._cart.push(newProductInCart);
     }
 
     this.saveLocalStorage();
@@ -56,11 +57,11 @@ export class CartService {
     localStorage.setItem('cart', JSON.stringify(this._cart)); //JSON.stringify: convierte un objeto en string
   }
 
-  private findProductLine(productLine: ProductInCart): ProductInCart | undefined {
-    return this._cart.find( cart => cart.product.id === productLine.product.id );
+  private findProductInCart(productLine: ProductLine): ProductLine | undefined {
+    return this._cart.find( productInCart => productInCart.idProduct === productLine.idProduct );
   }
 
-  private deleteProductLine(productLine: ProductInCart): void {
+  private deleteProductFromCart(productLine: ProductLine): void {
 
     if (productLine) {
       const index: number = this._cart.indexOf(productLine);
@@ -76,7 +77,7 @@ export class CartService {
   }
 
   public getQuantityProductLineByIdProduct(id: string): number {
-    const result = this._cart.find( cart => cart.product.id === id );
+    const result = this._cart.find( cart => cart.id === id );
 
     if(result?.quantity === undefined) return 0;
 
@@ -85,10 +86,12 @@ export class CartService {
 
   private calculateTotalToPay(): number {
 
-    let totalToPay: number = this.cart.reduce( (total, productInCart) => {
+    let totalToPay: number = this.cart.reduce( (total, productLine) => {
 
-      const productPrice: number = productInCart.product.price;
-      const quantity: number = productInCart.quantity;
+      const product: Product = this.productService.getProductById(productLine.idProduct)!;
+
+      const productPrice: number = product.price;
+      const quantity: number = productLine.quantity;
       const subtotal: number = productPrice * quantity;
 
       return total + subtotal;
