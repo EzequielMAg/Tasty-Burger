@@ -1,0 +1,29 @@
+.btn-group{
+    display: flex;
+    justify-content: space-between;
+}
+label{
+    display: block;
+}
+input{
+    width: 100%;
+}
+
+.edit-address{
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem 2rem;
+    gap: 3rem;
+}
+.e-btn{
+    border: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(51, 51, 51);
+    padding: 0.5rem;
+    border-radius: 7px;
+}
+
+.e-btn:hover {
+    background-color: rgb(255, 127, 31);
+}

@@ -1,1 +1,12 @@
-<p>edit-address works!</p>
+<form (ngSubmit)="editAddress()" class="edit-address">
+    <div>
+        <label for="">Dirección</label>
+        <input type="text">
+
+    </div>
+    <div class="btn-group">
+        <button class="e-btn" type="submit">Guardar cambios</button>
+        <button class="e-btn" (click)="closeDialog()">Cancelar</button>
+
+    </div>
+</form>
