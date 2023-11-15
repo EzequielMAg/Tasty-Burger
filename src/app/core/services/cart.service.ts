@@ -44,15 +44,16 @@ export class CartService {
       this._cart.productLineArray.push(newProductInCart);
     }
 
-    this.saveLocalStorage();
-
     // Actualiza el total a pagar
     this._cart.totalToPay = this.calculateTotalToPay();
+
+    (this._cart.productLineArray.length === 0) ? this.clearCart() : this.saveLocalStorage();
   }
 
   private saveLocalStorage(): void {
     localStorage.setItem('cart', JSON.stringify(this._cart)); //JSON.stringify: convierte un objeto en string
   }
+
 
   private findProductInCart(productLine: ProductLine): ProductLine | undefined {
     return this._cart.productLineArray.find( productInCart => productInCart.idProduct === productLine.idProduct );
@@ -70,11 +71,14 @@ export class CartService {
   }
 
   public clearCart(): void {
-    this._cart.productLineArray = [];
+    this._cart.totalToPay = 0;
+    this._cart.productLineArray.splice(0, this._cart.productLineArray.length);
+    console.log()
+    localStorage.removeItem('cart');
   }
 
   public getQuantityProductLineByIdProduct(id: string): number {
-    const result = this._cart.productLineArray.find( cart => cart.id === id );
+    const result = this._cart.productLineArray.find( productLine => productLine.idProduct === id );
 
     if(result?.quantity === undefined) return 0;
 
