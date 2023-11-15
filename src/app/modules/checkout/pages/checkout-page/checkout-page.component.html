@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()" class="wrapper">
+<form class="wrapper">
     <div class="title">
         <h1>CHECKOUT</h1>
     </div>
@@ -37,7 +37,7 @@
     
             
         </div>
-        <button type="submit" class="send-order btn">Enviar Pedido</button>
+        <button (click)="onSubmit()" class="send-order btn">Enviar Pedido</button>
 
     </div>
 
