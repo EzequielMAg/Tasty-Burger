@@ -9,6 +9,6 @@ import { ProductLine } from 'src/app/core/models';
 export class ListProductsCartComponent {
 
   @Input()
-  public cart: ProductLine[] = [];
+  public productLineArray: ProductLine[] = [];
 
 }

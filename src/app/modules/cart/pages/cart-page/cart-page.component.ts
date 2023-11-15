@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductLine } from 'src/app/core/models';
+import { Cart } from 'src/app/core/models';
 import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class CartPageComponent {
     this.cartService.clearCart();
   }
 
-  get cart(): ProductLine[] {
+  get cart(): Cart {
     return this.cartService.cart;
   }
 

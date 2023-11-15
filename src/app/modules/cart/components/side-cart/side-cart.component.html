@@ -5,18 +5,18 @@
       <h3>Carrito</h3>
     </div>
 
-    <ng-container *ngIf="cart.length !== 0">
+    <ng-container *ngIf="cart.productLineArray.length !== 0">
       <button class="btn btn-danger fix-btn fix-pisition" (click)="clearCart()"> X </button>
     </ng-container>
   </div>
 
-  <div *ngIf="cart.length === 0; else ListProductsCartComponent" class="cart-center">
+  <div *ngIf="cart.productLineArray.length === 0; else ListProductsCartComponent" class="cart-center">
     <i class="fa-solid fa-cart-shopping fa-2xl "></i>
     <p class="cart-empty">Carrito vacío!</p>
   </div>
 
   <ng-template #ListProductsCartComponent>
-    <list-products-cart [cart]="cart" class="content-cart"></list-products-cart>
+    <list-products-cart [productLineArray]="cart.productLineArray" class="content-cart"></list-products-cart>
 
     <div class="total-to-pay">
       <strong class="cart-price mx-2">

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ProductLine, Product } from '../models';
+import { ProductLine, Product, Cart } from '../models';
 import { ProductsService } from './products.service';
 
 @Injectable({
@@ -7,10 +7,7 @@ import { ProductsService } from './products.service';
 })
 export class CartService {
 
-  // Va contener todos los productos del carrito c/u con su cantidad (objeto ProductLine)
-  private _cart: ProductLine[] = [];
-
-  private _totalToPay: number = 0;
+  private _cart: Cart = new Cart();
 
   //TODO: variable q indica si esta en la page cart o en el menupage, para que el carrito cambie de estilos
   private _inPageCart: boolean = false;
@@ -18,12 +15,12 @@ export class CartService {
   constructor(private productService: ProductsService) { }
 
   //#region GETTERS
-  get cart(): ProductLine[] {
+  get cart(): Cart {
     return this._cart;
   }
 
   get totalToPay(): number {
-    return this._totalToPay;
+    return this._cart.totalToPay;
   }
 
   get inPageCart(): boolean {
@@ -44,13 +41,13 @@ export class CartService {
 
     } else {
       // Si el productLine no existe, se agrega al final del arreglo.
-      this._cart.push(newProductInCart);
+      this._cart.productLineArray.push(newProductInCart);
     }
 
     this.saveLocalStorage();
 
     // Actualiza el total a pagar
-    this._totalToPay = this.calculateTotalToPay();
+    this._cart.totalToPay = this.calculateTotalToPay();
   }
 
   private saveLocalStorage(): void {
@@ -58,26 +55,26 @@ export class CartService {
   }
 
   private findProductInCart(productLine: ProductLine): ProductLine | undefined {
-    return this._cart.find( productInCart => productInCart.idProduct === productLine.idProduct );
+    return this._cart.productLineArray.find( productInCart => productInCart.idProduct === productLine.idProduct );
   }
 
   private deleteProductFromCart(productLine: ProductLine): void {
 
     if (productLine) {
-      const index: number = this._cart.indexOf(productLine);
+      const index: number = this._cart.productLineArray.indexOf(productLine);
 
       if (index !== -1) {
-        this._cart.splice(index, 1);
+        this._cart.productLineArray.splice(index, 1);
       }
     }
   }
 
   public clearCart(): void {
-    this._cart = [];
+    this._cart.productLineArray = [];
   }
 
   public getQuantityProductLineByIdProduct(id: string): number {
-    const result = this._cart.find( cart => cart.id === id );
+    const result = this._cart.productLineArray.find( cart => cart.id === id );
 
     if(result?.quantity === undefined) return 0;
 
@@ -86,7 +83,7 @@ export class CartService {
 
   private calculateTotalToPay(): number {
 
-    let totalToPay: number = this.cart.reduce( (total, productLine) => {
+    let totalToPay: number = this.cart.productLineArray.reduce( (total, productLine) => {
 
       const product: Product = this.productService.getProductById(productLine.idProduct)!;
 

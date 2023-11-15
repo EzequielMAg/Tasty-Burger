@@ -2,15 +2,15 @@
     <div class="title">
         <h1>CARRITO</h1>
 
-        <ng-container *ngIf="cart.length > 0; else cartEmpty">
+        <ng-container *ngIf="cart.productLineArray.length > 0; else cartEmpty">
             <div class="cart-details">
-                <list-products-cart [cart]="cart" class="content-cart"></list-products-cart>
+                <list-products-cart [productLineArray]="cart.productLineArray" class="content-cart"></list-products-cart>
                 <p class="total-pay">Total: $ {{ totalToPay }}</p>
                 <button class="btn">Continuar</button>
             </div>
 
           </ng-container>
-      
+
           <ng-template #cartEmpty>
             <div class="cart-details cart-empty">
                 <i class="fa-solid fa-cart-shopping fa-2xl "></i>
