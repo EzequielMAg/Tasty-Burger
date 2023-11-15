@@ -103,11 +103,15 @@ export class ProductsService {
 
   public getProductById(idProduct: string):Product | undefined {
 
+    if(!this._loadedProducts)
+      this.getProducts();
+
     let product: Product | undefined;
 
     //Recorrer todos los arreglos hasta encontrar el producto
     product = this._productsBurguers.find((p) => p.id === idProduct);
     if (product) {
+      //console.log(product);
       return product;
     }
 

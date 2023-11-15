@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
-import { Order } from 'src/app/core/models';
+import { Order, Product } from 'src/app/core/models';
+import { ProductsService } from 'src/app/core/services/products.service';
 
 @Component({
   selector: 'order-item',
@@ -8,11 +9,13 @@ import { Order } from 'src/app/core/models';
   styleUrls: ['./order-item.component.css']
 })
 export class OrderItemComponent {
-  @Input()
 
+  @Input()
   public order: Order = new Order();
 
   public panelOpenState: boolean = false;
+
+  constructor(private productService: ProductsService) {}
 
   public formatDate(date: Date | null): string{
     if(!date){
@@ -28,8 +31,14 @@ export class OrderItemComponent {
     };
 
     return new Intl.DateTimeFormat("es-ES", options).format(date).replace(',', '').concat(" hs");
-    
-   
+  }
+
+  public getProductByid(idProduct: string): Product {
+
+    //console.log(idProduct);
+    const test = this.productService.getProductById(idProduct)!;
+    //console.log(test);
+    return test;
   }
 
 }

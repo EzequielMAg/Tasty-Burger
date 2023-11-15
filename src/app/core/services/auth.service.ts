@@ -59,6 +59,6 @@ export class AuthService {
             error: error => reject(error)
         })
     });
-}
+  }
 
 }

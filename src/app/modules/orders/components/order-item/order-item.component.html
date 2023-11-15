@@ -6,9 +6,9 @@
 
             <div class="principal">
                 <h4>Pedido # {{order.id}}</h4>
-                <p>Fecha de pedido: {{formatDate(order.date)}} 
+                <p>Fecha de pedido: {{formatDate(order.dateTime)}}
                 </p>
-                
+
             </div>
 
         </mat-expansion-panel-header>
@@ -21,20 +21,20 @@
                 <div class="product-detail">
                     <div class="left-side">
                         <div class="image-section">
-                            <img src="{{productInOrder.product.urlImage}}" alt="">
+                            <img src="{{ getProductByid(productInOrder.idProduct).urlImage }}" alt="">
                         </div>
                         <div class="description-section">
-                            <h6>{{productInOrder.product.name}}</h6>
-                            <p>{{productInOrder.product.description}}</p>
+                            <h6>{{ getProductByid(productInOrder.idProduct).name }}</h6>
+                            <p>{{ getProductByid(productInOrder.idProduct).description }}</p>
                         </div>
-                        
+
                     </div>
 
                     <div class="amount-section">
-                        <span>{{productInOrder.quantity}}x</span>
-                        <span>$ {{productInOrder.product.price}}</span>
+                        <span>{{ productInOrder.quantity }}x</span>
+                        <span>$ {{ getProductByid(productInOrder.idProduct).price }}</span>
                     </div>
-                    
+
                 </div>
                 <hr>
 
@@ -53,7 +53,7 @@
                         </div>
                         <hr>
                     </div>
-                    
+
                     <div class="delivery-detail-item">
                         <div class="icon">
                             <i class="fa-solid fa-location-dot"></i>
@@ -79,4 +79,4 @@
         </div>
     </mat-expansion-panel>
 </mat-accordion>
-        
+
