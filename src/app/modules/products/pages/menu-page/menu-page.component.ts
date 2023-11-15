@@ -11,26 +11,6 @@ import { ProductsApiService } from 'src/app/core/services/json-server/products-a
 })
 export class MenuPageComponent implements OnInit {
 
-  constructor(private productsApiService: ProductsApiService) {}
-
-  ngOnInit(): void {
-    //antes
-    // this.getProducts();
-
-    //ahora
-    this.getProductsByCategory(Category.Burguers);
-    this.getProductsByCategory(Category.BurguerVeggies);
-    this.getProductsByCategory(Category.Fries);
-    this.getProductsByCategory(Category.Salads);
-    this.getProductsByCategory(Category.SoftDrinks);
-    this.getProductsByCategory(Category.Beers);
-    this.getProductsByCategory(Category.Desserts);
-
-
-  }
-    //todos los productos
-  public products: Product[] = [];
-  //ahora
   public productsBurguers: Product[] = [];
   public productsBurguerVeggies: Product[] = [];
   public productsFries: Product[] = [];
@@ -39,16 +19,26 @@ export class MenuPageComponent implements OnInit {
   public productsBeers: Product[] = [];
   public productsDesserts: Product[] = [];
 
+  private loadedProducts: boolean = false;
+
+  constructor(private productsApiService: ProductsApiService) {}
+
+  ngOnInit(): void {
+
+    if(!this.loadedProducts)
+      this.getProducts();
+  }
+
   public async getProducts() {
-    try {
-      let responseApi = this.productsApiService.getProducts();
-      const data = await lastValueFrom(responseApi);
+    this.getProductsByCategory(Category.Burguers);
+    this.getProductsByCategory(Category.BurguerVeggies);
+    this.getProductsByCategory(Category.Fries);
+    this.getProductsByCategory(Category.Salads);
+    this.getProductsByCategory(Category.SoftDrinks);
+    this.getProductsByCategory(Category.Beers);
+    this.getProductsByCategory(Category.Desserts);
 
-      this.products = data.map( (productData: any) => new Product(productData) );
-
-    } catch (error) {
-      console.log(error);
-    }
+    this.loadedProducts = true;
   }
 
   public async getProductsByCategory(category : Category) {
@@ -84,8 +74,4 @@ export class MenuPageComponent implements OnInit {
       console.log(error);
     }
   }
-
-
-
-
 }
