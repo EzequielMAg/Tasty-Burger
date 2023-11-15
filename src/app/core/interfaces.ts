@@ -1,54 +1,46 @@
 import { Category, PayMode } from "./enums";
-import { Cart, Product, ProductInCart } from "./models";
+import { Cart, Order, ProductLine } from "./models";
 
 export interface IUser {
-  id:          string;// | null;  //TODO: Revisar que pasa aca despues por haber comentado esto..
+  id:          string;
   name:        string;
   email:       string;
   password:    string;
-  phoneNumber: number;
   address:     string;
+  phoneNumber: number;
 
   cart:        Cart;
+  orders:      Order[];
 }
 
 export interface IProduct{
-  id:          string;// | null;  //TODO: Revisar que pasa aca despues por haber comentado esto..
+  id:          string;
   name:        string;
   price:       number;
   description: string;
 
-  category:    Category;
   urlImage:    string;
+  category:    Category;
 }
 
 export interface ICart{
   id:               string;
-  productLineArray: ProductInCart[];
   totalToPay:       number;
+  productLineArray: ProductLine[];
 }
 
-export interface IProductInCart {
-  id:       string;
-  quantity: number;
-  product:  Product;
+export interface IProductLine {
+  id:        string;
+  quantity:  number;
+  idProduct: string;
 }
 
 export interface IOrder{
   id: string;
   totalPaid: number;
   payMode: PayMode;
-  date: Date | null;
+  dateTime: Date | null;
   address: string;
 
-  idUser: string;
-  productLineArray: IProductInOrder[];
-}
-
-
-export interface IProductInOrder{
-  id: string;
-  quantity: number;
-  product: Product;
-  
+  productLineArray: ProductLine[];
 }

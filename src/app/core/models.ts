@@ -1,5 +1,5 @@
-import { v4 as uuid} from 'uuid';
-import { ICart, IOrder, IProduct, IProductInCart, IUser } from './interfaces';
+//import { v4 as uuid} from 'uuid';
+import { ICart, IOrder, IProduct, IProductLine, IUser } from './interfaces';
 import { Category, PayMode } from './enums';
 
 export class User implements IUser {
@@ -11,11 +11,12 @@ export class User implements IUser {
   public address:      string;
 
   public cart:         Cart;
+  public orders:       Order[];
 
   constructor(user?: User) {
     if (user) {
       // Si por x razon cada atributo del usuario es falsy, se inicializa por default
-      // o se asignan el valor de lso atributos del usuario que se paso por argumento
+      // o se asignan el valor de los atributos del usuario que se paso por argumento
       this.id = user.id || '';
       this.name = user.name || '';
       this.email = user.email || '';
@@ -23,6 +24,7 @@ export class User implements IUser {
       this.phoneNumber = user.phoneNumber || 0;
       this.address = user.address || '';
       this.cart = user.cart || new Cart();
+      this.orders = user.orders || [];
 
     } else {
       // Si no se pasa un usuario, inicializa las propiedades a valores por defecto o vacíos
@@ -33,6 +35,7 @@ export class User implements IUser {
       this.phoneNumber = 0;
       this.address = '';
       this.cart = new Cart();
+      this.orders = [];
     }
   }
 }
@@ -68,7 +71,7 @@ export class Product implements IProduct{
 
 export class Cart implements ICart {
   public id:               string;
-  public productLineArray: ProductInCart[];
+  public productLineArray: ProductLine[];
   public totalToPay:       number;
 
   constructor(cart?: Cart) {
@@ -85,74 +88,54 @@ export class Cart implements ICart {
   }
 }
 
-export class ProductInCart implements IProductInCart {
+export class ProductLine implements IProductLine {
   public id:       string;
   public quantity: number;
-  public product:  Product;
+  public idProduct:  string;
 
   constructor(productInCart?: any) {
     if (productInCart) {
       this.id = productInCart.id || '';
       this.quantity = productInCart.quantity || 0;
-      this.product = productInCart.product || new Product();
+      this.idProduct = productInCart.idProduct || '';
 
     } else {
       this.id = '';
       this.quantity = 0;
-      this.product = new Product();
+      this.idProduct = '';
     }
   }
 }
 
 export class Order implements IOrder {
   public id:               string;
-  public totalPaid:       number;
+  public totalPaid:        number;
   public payMode:          PayMode;
-  public date:             Date | null;
+  public dateTime:         Date | null;
   public address:          string;
 
   public idUser:           string;
-  public productLineArray: ProductInOrder[];
+  public productLineArray: ProductLine[];
 
   constructor(order?: Order) {
     if (order) {
       this.id = order.id || '';
       this.totalPaid = order.totalPaid || 0;
       this.payMode = order.payMode || null;
-      this.date = order.date || new Date();
+      this.dateTime = order.dateTime || new Date();
       this.address = order.address || '';
-      
+
       this.productLineArray = order.productLineArray || [];
       this.idUser = order.idUser || '';
-
 
     } else {
       this.id = '';
       this.productLineArray = [];
       this.totalPaid = 0;
       this.payMode = PayMode.withoutPaymentMethod;
-      this.date = null;
+      this.dateTime = null;
       this.address = '';
       this.idUser = '';
-    }
-  }
-}
-
-export class ProductInOrder implements IProductInCart {
-  public id:       string;
-  public quantity: number;
-  public product:  Product;
-
-  constructor(productInCart?: any) {
-    if (productInCart) {
-      this.id = productInCart.id || '';
-      this.quantity = productInCart.quantity || 0;
-      this.product = productInCart.product || new Product();
-
-    } else {
-      this.id = '';
-      this.quantity = 0;
-      this.product = new Product();
     }
   }
 }
