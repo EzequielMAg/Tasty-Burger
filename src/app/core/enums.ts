@@ -17,3 +17,8 @@ export enum PayMode{
   Transfer = "Transferencia",
   withoutPaymentMethod = "Sin metodo de pago"
 }
+
+export enum DeliveryType{
+  Delivery = "Delivery",
+  PickupAtTheLocation = "Retiro en el local"
+}

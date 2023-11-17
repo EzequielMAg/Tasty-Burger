@@ -1,4 +1,4 @@
-<div class="wrapper">
+<form class="wrapper">
     <div class="title">
         <h1>CHECKOUT</h1>
     </div>
@@ -8,19 +8,19 @@
             <div class="delivery-details-item separator">
                 <div>
                     <h5>Dirección</h5>
-                    <p>Ingresa tu dirección</p>
+                    <p>{{address}}</p>
                 </div>
                 <div>
-                    <button class="edit-btn btn">Editar</button>
+                    <button (click)="editAddress()" class="edit-btn btn">Editar</button>
                 </div>
             </div>
             <div class="delivery-details-item separator">
                 <div>
                     <h5>Tipo de entrega</h5>
-                    <p>Delivery</p>
+                    <p>{{deliveryType}}</p>
                 </div>
                 <div>
-                    <button class="edit-btn btn">Editar</button>
+                    <button (click)="editDeliveryType()" class="edit-btn btn">Editar</button>
                 </div>
             </div>
 
@@ -28,17 +28,17 @@
             <div class="delivery-details-item separator">
                 <div>
                     <h5>Forma de Pago</h5>
-                    <p>Efectivo</p>
+                    <p>{{payMode}}</p>
                 </div>
                 <div>
-                    <button class="edit-btn btn">Editar</button>
+                    <button (click)="editPayMode()" class="edit-btn btn">Editar</button>
                 </div>
             </div>
     
             
         </div>
-        <button class="send-order btn">Enviar Pedido</button>
+        <button (click)="onSubmit()" class="send-order btn">Enviar Pedido</button>
 
     </div>
 
-</div>
+</form>

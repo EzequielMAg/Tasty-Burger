@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-edit-address',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class EditAddressComponent {
 
+  public address: string = 'Sin dirección';
+  
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private dialogRef: MatDialogRef<EditAddressComponent>){}
+
+  public editAddress(){
+    console.log("Se edito la dirección");
+    this.closeDialog();
+  }
+
+  closeDialog(){
+    this.dialogRef.close(false);
+  }
 }

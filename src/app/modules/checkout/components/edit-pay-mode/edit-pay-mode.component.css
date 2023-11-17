@@ -17,10 +17,9 @@
     background-color: rgb(255, 127, 31);
 }
 
-
-.edit-delivery-type{
+.edit-pay-mode{
     display: flex;
     flex-direction: column;
     margin: 2.5rem 2rem;
-    gap: 1.8rem;
+    gap: 1.4rem;
 }

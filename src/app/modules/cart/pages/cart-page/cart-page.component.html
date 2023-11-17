@@ -6,7 +6,7 @@
             <div class="cart-details">
                 <list-products-cart [productLineArray]="cart.productLineArray" class="content-cart"></list-products-cart>
                 <p class="total-pay">Total: $ {{ totalToPay }}</p>
-                <button class="btn">Continuar</button>
+                <button routerLink="/checkout" class="btn">Continuar</button>
             </div>
 
           </ng-container>
