@@ -10,9 +10,14 @@ export class CartService {
   private _cart: Cart = new Cart();
 
   //TODO: variable q indica si esta en la page cart o en el menupage, para que el carrito cambie de estilos
+  //      y habilite para mostrarse cierto HTML.
   private _inPageCart: boolean = false;
 
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService) {
+
+    this.loadCartFromLocalStorage();
+
+  }
 
   //#region GETTERS
   get cart(): Cart {
@@ -47,10 +52,12 @@ export class CartService {
     // Actualiza el total a pagar
     this._cart.totalToPay = this.calculateTotalToPay();
 
-    (this._cart.productLineArray.length === 0) ? this.clearCart() : this.saveLocalStorage();
+    (this._cart.productLineArray.length === 0 || this._cart.totalToPay === 0) ?
+      this.clearCart() :
+      this.saveCartLocalStorage();
   }
 
-  private saveLocalStorage(): void {
+  private saveCartLocalStorage(): void {
     localStorage.setItem('cart', JSON.stringify(this._cart)); //JSON.stringify: convierte un objeto en string
   }
 
@@ -100,4 +107,19 @@ export class CartService {
 
     return totalToPay;
   }
+
+  public checkCartInLocalStorage(): boolean {
+    return localStorage.getItem('cart') ? true : false;
+  }
+
+  private loadCartFromLocalStorage(): void {
+
+    if(!this.checkCartInLocalStorage()) return;
+
+    //Si pasa para acam hay productos agregados al carrito en el local storage
+    this._cart = JSON.parse( localStorage.getItem('cart')! );
+
+  }
+
+
 }

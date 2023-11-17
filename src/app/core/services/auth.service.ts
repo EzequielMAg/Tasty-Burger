@@ -13,7 +13,7 @@ export class AuthService {
 
   constructor(private usersApiService: UsersApiService) {
 
-    this.initializeVariables();
+    this.loadUserFromLocalStorage();
 
   }
 
@@ -65,11 +65,14 @@ export class AuthService {
     });
   }
 
-  private initializeVariables(): void {
-    if(this.checkAuthentication()) {
-      this.userLoggedIn = true;
-      this.getLoggedInUser();
-    }
+  private loadUserFromLocalStorage(): void {
+
+    // Si no encuentra el id del usuario en el localStorage, entonces no se logueo, no hay nada que recuperar, no se hace nada
+    if(!this.checkAuthentication()) return;
+
+    this.userLoggedIn = true;
+    this.getLoggedInUser();
+
   }
 
   private getLoggedInUser(): void{
