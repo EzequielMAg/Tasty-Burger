@@ -101,6 +101,8 @@ export class ProductsService {
     }
   }
 
+
+  //TODO: refactorizacion pendiente
   public getProductById(idProduct: string):Product | undefined {
 
     if(!this._loadedProducts)

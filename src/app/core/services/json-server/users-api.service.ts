@@ -19,7 +19,13 @@ export class UsersApiService {
   public getUserToAuth(email: string, password: string): Observable<User[]> {
     return this.http.get<User[]>(`${this.baseURL}?email=${email}&password=${password}`);
   }
+
   public addUser(user : User): Observable<User>{
-    return this.http.post<User>(`${this.baseURL}`, user) 
-}
+    return this.http.post<User>(`${this.baseURL}`, user)
+  }
+
+  public getUserById(userId: string): Observable<User> {
+    return this.http.get<User>(`${this.baseURL}/${userId}`);
+  }
+
 }

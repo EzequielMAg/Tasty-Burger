@@ -11,7 +11,11 @@ export class AuthService {
   private user: User | undefined;
   public userLoggedIn: boolean = false;
 
-  constructor(private usersApiService: UsersApiService) { }
+  constructor(private usersApiService: UsersApiService) {
+
+    this.initializeVariables();
+
+  }
 
   get currentUser(): User | undefined {
     if (!this.user) return undefined;
@@ -59,6 +63,26 @@ export class AuthService {
             error: error => reject(error)
         })
     });
+  }
+
+  private initializeVariables(): void {
+    if(this.checkAuthentication()) {
+      this.userLoggedIn = true;
+      this.getLoggedInUser();
+    }
+  }
+
+  private getLoggedInUser(): void{
+
+    //Obtengo el id del usuario logueado, que quedo guardado en el localStorage
+    const idCurrectUser: string = localStorage.getItem('token')!;
+
+    //Con el id cargo el usuario
+    this.usersApiService.getUserById(idCurrectUser).subscribe(
+      (resp) => {
+        this.user = resp;
+      }
+    );
   }
 
 }
