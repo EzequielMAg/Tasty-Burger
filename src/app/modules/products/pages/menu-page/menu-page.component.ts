@@ -13,8 +13,7 @@ export class MenuPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if(!this.productService.loadedProducts)
-      this.productService.getProducts();
+    this.loadProducts();
   }
 
   //#region GETTERS
@@ -47,4 +46,8 @@ export class MenuPageComponent implements OnInit {
   }
   //#endregion
 
+  private loadProducts(): void {
+    if(!this.productService.loadedProducts)
+    this.productService.getProducts();
+  }
 }

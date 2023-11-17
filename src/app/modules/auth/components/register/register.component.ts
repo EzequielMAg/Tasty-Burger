@@ -17,7 +17,7 @@ export class RegisterComponent {
 
   public registerUser(){
     this.authService.addUser(this.user);
-    this.router.navigate(["/products"]);
+    this.router.navigate(["/auth/login"]);
     console.log(this.user);
   }
 
