@@ -16,7 +16,6 @@ h1{
 }
 
 .delivery{
-    /* margin: 0 .5rem; */
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -32,12 +31,10 @@ h1{
 .delivery-details{
     display: flex;
     flex-direction: column;
-    /* gap: 1.5rem;  */
     padding: 2rem 2rem;
 }
 
 .delivery-details-item{
-    /* margin-top: 2rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,14 +53,10 @@ h1{
     
 }
 
-  
 .btn:hover {
     background-color: rgb(255, 127, 31);
 }
 
-
-
 .send-order{
     margin: 0 auto;
-    /* width: 30%; */
 }

@@ -15,6 +15,13 @@
 .my-container {
   padding-top: .5rem;
   border-bottom: 1px solid #000;
+  width: 14.95rem;
+}
+
+@media (min-width: 1100px) {
+  .my-container {
+    width: 21rem;
+  }
 }
 
 .my-container h5 {
