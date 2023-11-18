@@ -22,11 +22,13 @@ export class CheckoutPageComponent {
   public deliveryType: DeliveryType = DeliveryType.Delivery;
 
   constructor(private dialog: MatDialog, private authService: AuthService) {
-
+    this.user = this.authService.currentUser!;
 
   }
 
+
   get currentAddress(): string {
+    console.log("checkou ..--> " + this.user.address);
     if(this.user.address !== '') {
       return this.user.address;
     } else {

@@ -1,7 +1,8 @@
 <form (ngSubmit)="editAddress()" class="edit-address">
     <div>
         <label for="">Dirección</label>
-        <input type="text">
+        <input type="text" [(ngModel)] = "address">
+        <p>{{address}}sdfdsfs</p>
 
     </div>
     <div class="btn-group">

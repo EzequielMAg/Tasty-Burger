@@ -6,7 +6,7 @@
       "email": "adm@gmail.com",
       "password": "123456",
       "phoneNumber": 2254532122,
-      "address": "",
+      "address": "Sin dirección",
       "cart": {
         "id": "",
         "productLineArray": [

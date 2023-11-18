@@ -33,4 +33,9 @@ export class UsersApiService {
     return this.http.get<User>(`${this.baseURL}/${userId}`);
   }
 
+  public updateAddress(user: User, address:string): Observable<Boolean> {
+    user.address = address;
+    return this.http.patch<Boolean>(`${this.baseURL}/${user.id}`, user);
+  }
+
 }
