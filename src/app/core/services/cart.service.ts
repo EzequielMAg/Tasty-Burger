@@ -72,7 +72,7 @@ export class CartService {
     localStorage.setItem('cart', JSON.stringify(this._cart)); //JSON.stringify: convierte un objeto en string
   }
 
-  private saveCartJson(): void {
+  public saveCartJson(): void {
 
     this.cartApiService.updateCart(this.authService.currentUser!, this._cart).subscribe({
 
@@ -141,7 +141,7 @@ export class CartService {
     return localStorage.getItem('cart') ? true : false;
   }
 
-  private loadCartFromLocalStorage(): void {
+  public loadCartFromLocalStorage(): void {
 
     if(!this.checkCartInLocalStorage()) return;
 

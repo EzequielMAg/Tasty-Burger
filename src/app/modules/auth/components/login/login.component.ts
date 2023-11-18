@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { CartService } from '../../../../core/services/cart.service';
 
 @Component({
   selector: 'auth-login',
@@ -12,7 +13,7 @@ export class LoginComponent {
   public email: string = '';
   public password: string = '';
 
-  constructor(private authService: AuthService, private router: Router,  private route: ActivatedRoute) { }
+  constructor(private authService: AuthService, private router: Router,  private cartService: CartService) { }
 
   public async initSession() {
     //TODO: falta implementar formularios reactivos
@@ -22,8 +23,12 @@ export class LoginComponent {
        if (isLogin) {
 
         if (this.authService.fromCartPageComponent) {
+          //Guardar el carrito ACA
+          this.cartService.saveCartJson();
+
           this.router.navigate(['/checkout']);
           this.authService.fromCartPageComponent = false;
+
         } else {
           this.router.navigate(['/products']);
         }

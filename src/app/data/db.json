@@ -6,11 +6,27 @@
       "email": "adm@gmail.com",
       "password": "123",
       "phoneNumber": 2254532122,
-      "address": "prueba 123",
+      "address": "",
       "cart": {
         "id": "",
-        "productLineArray": [],
-        "totalToPay": 0
+        "productLineArray": [
+          {
+            "id": "",
+            "quantity": 1,
+            "idProduct": "1"
+          },
+          {
+            "id": "",
+            "quantity": 1,
+            "idProduct": "2"
+          },
+          {
+            "id": "",
+            "quantity": 1,
+            "idProduct": "3"
+          }
+        ],
+        "totalToPay": 12700
       },
       "orders": []
     },
@@ -20,7 +36,7 @@
       "email": "flor@gmail.com",
       "password": "123",
       "phoneNumber": 2254533702,
-      "address": "prueba 123",
+      "address": "",
       "cart": {
         "id": "",
         "productLineArray": [],
@@ -34,7 +50,7 @@
       "email": "eze@gmail.com",
       "password": "123",
       "phoneNumber": 2254411162,
-      "address": "prueba 123",
+      "address": "",
       "cart": {
         "id": "",
         "productLineArray": [],
@@ -48,10 +64,15 @@
       "email": "dev@gmail.com",
       "password": "123",
       "phoneNumber": 2254411162,
-      "address": "prueba 123",
+      "address": "",
       "cart": {
         "id": "",
         "productLineArray": [
+          {
+            "id": "",
+            "quantity": 3,
+            "idProduct": "3"
+          },
           {
             "id": "",
             "quantity": 1,
@@ -61,11 +82,6 @@
             "id": "",
             "quantity": 2,
             "idProduct": "2"
-          },
-          {
-            "id": "",
-            "quantity": 3,
-            "idProduct": "3"
           }
         ],
         "totalToPay": 25500
@@ -79,62 +95,6 @@
       "password": "1234",
       "phoneNumber": null,
       "address": null,
-      "cart": {
-        "id": "",
-        "productLineArray": [],
-        "totalToPay": 0
-      },
-      "orders": []
-    },
-    {
-      "id": "6",
-      "name": "pepe",
-      "email": "pepe@gmail.com",
-      "password": "123",
-      "phoneNumber": 0,
-      "address": "",
-      "cart": {
-        "id": "",
-        "productLineArray": [],
-        "totalToPay": 0
-      },
-      "orders": []
-    },
-    {
-      "id": "gBafYhC",
-      "name": "pepe2",
-      "email": "pepe2@gmail.com",
-      "password": "123",
-      "phoneNumber": 0,
-      "address": "",
-      "cart": {
-        "id": "",
-        "productLineArray": [],
-        "totalToPay": 0
-      },
-      "orders": []
-    },
-    {
-      "id": "ivfxriA",
-      "name": "pepe3",
-      "email": "pep3@gmail.com",
-      "password": "123",
-      "phoneNumber": 0,
-      "address": "",
-      "cart": {
-        "id": "",
-        "productLineArray": [],
-        "totalToPay": 0
-      },
-      "orders": []
-    },
-    {
-      "id": "Qww-CpD",
-      "name": "pepe4",
-      "email": "pepe4@gmail.com",
-      "password": "123",
-      "phoneNumber": 0,
-      "address": "",
       "cart": {
         "id": "",
         "productLineArray": [],
@@ -431,22 +391,6 @@
       "description": "500gr",
       "category": "Frituras",
       "urlImage": "https://firebasestorage.googleapis.com/v0/b/dondepido-befab.appspot.com/o/aMAevv6mArmDRUywEStq%2Fproducts%2F53ebce33-b391-43b2-9a3c-7cce6e7cf1fc?alt=media"
-    }
-  ],
-  "orders": [
-    {
-      "id": "1",
-      "totalPaid": 1232,
-      "payMode": "Billetera Virtual",
-      "dateTime": null,
-      "address": "prueba 123",
-      "productLineArray": [
-        {
-          "id": "4",
-          "quantity": 3,
-          "idProduct": "1"
-        }
-      ]
     }
   ]
 }

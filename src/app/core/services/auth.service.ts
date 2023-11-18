@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { User } from '../models';
 import { UsersApiService } from './json-server/users-api.service';
 import { Observable, lastValueFrom } from 'rxjs';
+import { CartService } from './cart.service';
 
 @Injectable({
   providedIn: 'root'
@@ -52,6 +53,7 @@ export class AuthService {
     this.user = undefined;
     this.userLoggedIn = false;
     localStorage.clear();
+
   }
 
   public checkAuthentication(): boolean {

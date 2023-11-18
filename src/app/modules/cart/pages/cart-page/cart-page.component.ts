@@ -31,10 +31,15 @@ export class CartPageComponent {
 
     if (this.authService.checkAuthentication()) {
       this.router.navigate(['/checkout']);
+
+      //Guardar el carrito ACA
+      this.cartService.saveCartJson();
     } else {
       this.authService.fromCartPageComponent = true;
       this.router.navigate(['/auth/login']);
     }
+
+
   }
 
 

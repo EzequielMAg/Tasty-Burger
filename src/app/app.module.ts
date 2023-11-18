@@ -20,7 +20,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SharedModule,
     MatExpansionModule,
     MatDialogModule,
-  
     BrowserAnimationsModule
   ],
   providers: [],
