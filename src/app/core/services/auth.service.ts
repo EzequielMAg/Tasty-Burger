@@ -11,6 +11,8 @@ export class AuthService {
   private user: User | undefined;
   public userLoggedIn: boolean = false;
 
+  public fromCartPageComponent: boolean = false;
+
   constructor(private usersApiService: UsersApiService) {
 
     this.loadUserFromLocalStorage();

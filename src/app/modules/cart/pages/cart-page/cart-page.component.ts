@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cart } from 'src/app/core/models';
+import { AuthService } from 'src/app/core/services/auth.service';
 import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
@@ -9,7 +11,9 @@ import { CartService } from 'src/app/core/services/cart.service';
 })
 export class CartPageComponent {
 
-  constructor(private cartService: CartService){}
+  constructor(private cartService: CartService,
+              private authService: AuthService,
+              private router: Router){}
 
   public clearCart(): void {
     this.cartService.clearCart();
@@ -22,5 +26,16 @@ export class CartPageComponent {
   get totalToPay(): number {
     return this.cartService.totalToPay;
   }
+
+  public checkAuthentication(): void {
+
+    if (this.authService.checkAuthentication()) {
+      this.router.navigate(['/checkout']);
+    } else {
+      this.authService.fromCartPageComponent = true;
+      this.router.navigate(['/auth/login']);
+    }
+  }
+
 
 }
