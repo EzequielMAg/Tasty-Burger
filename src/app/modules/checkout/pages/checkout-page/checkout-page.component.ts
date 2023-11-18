@@ -26,22 +26,30 @@ export class CheckoutPageComponent {
 
   }
 
-  editAddress(){
+  get currentAddress(): string {
+    if(this.user.address !== '') {
+      return this.user.address;
+    } else {
+      return this.address;
+    }
+  }
+
+  public editAddress(){
     const dialogRef = this.dialog.open(EditAddressComponent, {data: this.address, height: '220px', width: '300px'});
     dialogRef.afterClosed().subscribe(result => {
       console.log("el cuadro de dialogo se cerro con resultado: ", result);
     })
   }
 
-  editDeliveryType(){
+  public editDeliveryType(){
     const dialogRef = this.dialog.open(EditDeliveryTypeComponent, {data: this.deliveryType, height: '220px', width: '300px'});
     dialogRef.afterClosed().subscribe(result => {
       console.log("el cuadro de dialogo se cerro con resultado: ", result);
     console.log(this.deliveryType);
   })
-}
+  }
 
-  editPayMode(){
+  public editPayMode(){
     const dialogRef = this.dialog.open(EditPayModeComponent, {data: this.payMode, height: '400px', width: '350px'});
     dialogRef.afterClosed().subscribe(result => {
       console.log("el cuadro de dialogo se cerro con resultado: ", result);

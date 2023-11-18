@@ -4,7 +4,7 @@
       "id": "1",
       "name": "adm",
       "email": "adm@gmail.com",
-      "password": "123",
+      "password": "123456",
       "phoneNumber": 2254532122,
       "address": "",
       "cart": {
@@ -22,11 +22,11 @@
           },
           {
             "id": "",
-            "quantity": 2,
+            "quantity": 3,
             "idProduct": "3"
           }
         ],
-        "totalToPay": 21200
+        "totalToPay": 25500
       },
       "orders": []
     },
