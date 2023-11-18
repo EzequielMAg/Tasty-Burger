@@ -61,4 +61,28 @@ export class AuthService {
     });
   }
 
+  public async userEmailExists(email: string): Promise<boolean> {
+
+    let resp = false;
+
+    try {
+      let apiResponse: Observable<User[]> = this.usersApiService.getUserByEmail(email);
+
+      let userResponse: User[] = await lastValueFrom(apiResponse);
+
+      let user:User = userResponse[0];
+
+      if (user) {
+        resp = true;
+        console.log(userResponse);
+      }
+    } catch (error) {
+      console.error('Error al verificar el correo electrónico:', error);
+      throw error;
+    }
+
+    return resp;
+  }
+
+
 }

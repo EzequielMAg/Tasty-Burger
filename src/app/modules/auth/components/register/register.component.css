@@ -28,7 +28,7 @@ form h4{
   margin: 0;
 }
 
-.form-group{
+.form-content{
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -73,4 +73,12 @@ form h4{
 .data-group{
   display: flex;
   gap: 1rem;
+}
+
+.incorrect-input-message{
+  color: red;
+  margin: .1rem 0 0 0;
+  font-size: .8rem;
+  font-weight: bold;
+  width: 10rem;
 }
