@@ -21,20 +21,16 @@ export class UsersApiService {
   }
 
   public addUser(user : User): Observable<User>{
-<<<<<<< HEAD
-    return this.http.post<User>(`${this.baseURL}`, user) 
-}
-
-public getUserByEmail(email: string): Observable<User[]>{
-  return this.http.get<User[]>(`${this.baseURL}?email=${email}`);
-}
-=======
     return this.http.post<User>(`${this.baseURL}`, user)
   }
+
+  public getUserByEmail(email: string): Observable<User[]>{
+    return this.http.get<User[]>(`${this.baseURL}?email=${email}`);
+  }
+
 
   public getUserById(userId: string): Observable<User> {
     return this.http.get<User>(`${this.baseURL}/${userId}`);
   }
->>>>>>> Ezequiel
 
 }

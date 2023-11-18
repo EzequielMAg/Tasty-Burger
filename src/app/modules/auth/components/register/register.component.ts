@@ -21,7 +21,7 @@ export class RegisterComponent {
     email: new FormControl('', [Validators.required, Validators.pattern(this.emailPattern)]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     passwordConfirm: new FormControl('', [Validators.required]),
-  
+
   }, {
     validators: this.passwordMatchValidator('password', 'passwordConfirm'),
   });
@@ -34,9 +34,9 @@ export class RegisterComponent {
     let emailExists: boolean = await this.authService.userEmailExists(this.registerForm.value.email)
 
     console.log();
-    
+
     if(!emailExists){
-      
+
       console.log("Email correcto!");
       this.saveFormUserData();
       this.authService.addUser(this.user);
@@ -46,17 +46,11 @@ export class RegisterComponent {
       this.registerForm.reset({ name: this.user.name });
     }
 
-<<<<<<< HEAD
-=======
-  public registerUser(){
-    this.authService.addUser(this.user);
-    this.router.navigate(["/auth/login"]);
->>>>>>> Ezequiel
     console.log(this.user);
   }
 
   isValidFiled(field: string): boolean | null {
-    
+
     return this.registerForm.controls[field].errors && this.registerForm.controls[field].touched;
   }
 
@@ -76,13 +70,13 @@ export class RegisterComponent {
           return "Email inválido.";
         case 'passwordMismatch':
           return "Las contraseñas no coinciden";
-  
-        
+
+
       }
     }
 
     console.log(Object.keys(errors));
-    
+
     return null;
   }
 
@@ -98,7 +92,7 @@ export class RegisterComponent {
     return (formGroup: AbstractControl): ValidationErrors | null => {
       const passwordControl = formGroup.get(controlName);
       const confirmPasswordControl = formGroup.get(matchingControlName);
-  
+
       if (passwordControl && confirmPasswordControl && passwordControl.value !== confirmPasswordControl.value) {
         confirmPasswordControl.setErrors({ passwordMismatch: true });
         return { passwordMismatch: true };

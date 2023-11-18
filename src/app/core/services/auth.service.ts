@@ -69,7 +69,6 @@ export class AuthService {
     });
   }
 
-<<<<<<< HEAD
   public async userEmailExists(email: string): Promise<boolean> {
 
     let resp = false;
@@ -93,7 +92,6 @@ export class AuthService {
     return resp;
   }
 
-=======
   private loadUserFromLocalStorage(): void {
 
     // Si no encuentra el id del usuario en el localStorage, entonces no se logueo, no hay nada que recuperar, no se hace nada
@@ -116,6 +114,5 @@ export class AuthService {
       }
     );
   }
->>>>>>> Ezequiel
 
 }

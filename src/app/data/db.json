@@ -17,6 +17,36 @@
           },
           {
             "id": "",
+            "quantity": 2,
+            "idProduct": "2"
+          },
+          {
+            "id": "",
+            "quantity": 2,
+            "idProduct": "3"
+          }
+        ],
+        "totalToPay": 21200
+      },
+      "orders": []
+    },
+    {
+      "id": "2",
+      "name": "flor",
+      "email": "flor@gmail.com",
+      "password": "123456",
+      "phoneNumber": 2254533702,
+      "address": "",
+      "cart": {
+        "id": "",
+        "productLineArray": [
+          {
+            "id": "",
+            "quantity": 1,
+            "idProduct": "1"
+          },
+          {
+            "id": "",
             "quantity": 1,
             "idProduct": "2"
           },
@@ -27,20 +57,6 @@
           }
         ],
         "totalToPay": 12700
-      },
-      "orders": []
-    },
-    {
-      "id": "2",
-      "name": "flor",
-      "email": "flor@gmail.com",
-      "password": "123",
-      "phoneNumber": 2254533702,
-      "address": "",
-      "cart": {
-        "id": "",
-        "productLineArray": [],
-        "totalToPay": 0
       },
       "orders": []
     },
@@ -95,6 +111,20 @@
       "password": "1234",
       "phoneNumber": null,
       "address": null,
+      "cart": {
+        "id": "",
+        "productLineArray": [],
+        "totalToPay": 0
+      },
+      "orders": []
+    },
+    {
+      "id": "CYHaOuI",
+      "name": "eze",
+      "email": "a@gmail.com",
+      "password": "123456",
+      "phoneNumber": 0,
+      "address": "",
       "cart": {
         "id": "",
         "productLineArray": [],

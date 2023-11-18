@@ -20,11 +20,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FormsModule,
     SharedModule,
-<<<<<<< HEAD
-    ReactiveFormsModule
-=======
+    ReactiveFormsModule,
     RouterModule
->>>>>>> Ezequiel
   ],
   exports: [
 
