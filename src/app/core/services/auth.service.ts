@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { User } from '../models';
 import { UsersApiService } from './json-server/users-api.service';
 import { Observable, lastValueFrom } from 'rxjs';
+import { CartService } from './cart.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,13 @@ export class AuthService {
   private user: User | undefined;
   public userLoggedIn: boolean = false;
 
-  constructor(private usersApiService: UsersApiService) { }
+  public fromCartPageComponent: boolean = false;
+
+  constructor(private usersApiService: UsersApiService) {
+
+    this.loadUserFromLocalStorage();
+
+  }
 
   get currentUser(): User | undefined {
     if (!this.user) return undefined;
@@ -46,6 +53,7 @@ export class AuthService {
     this.user = undefined;
     this.userLoggedIn = false;
     localStorage.clear();
+
   }
 
   public checkAuthentication(): boolean {
@@ -61,6 +69,7 @@ export class AuthService {
     });
   }
 
+<<<<<<< HEAD
   public async userEmailExists(email: string): Promise<boolean> {
 
     let resp = false;
@@ -84,5 +93,29 @@ export class AuthService {
     return resp;
   }
 
+=======
+  private loadUserFromLocalStorage(): void {
+
+    // Si no encuentra el id del usuario en el localStorage, entonces no se logueo, no hay nada que recuperar, no se hace nada
+    if(!this.checkAuthentication()) return;
+
+    this.userLoggedIn = true;
+    this.getLoggedInUser();
+
+  }
+
+  private getLoggedInUser(): void{
+
+    //Obtengo el id del usuario logueado, que quedo guardado en el localStorage
+    const idCurrectUser: string = localStorage.getItem('token')!;
+
+    //Con el id cargo el usuario
+    this.usersApiService.getUserById(idCurrectUser).subscribe(
+      (resp) => {
+        this.user = resp;
+      }
+    );
+  }
+>>>>>>> Ezequiel
 
 }

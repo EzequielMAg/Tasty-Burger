@@ -7,6 +7,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,7 +20,11 @@ import { RegisterComponent } from './components/register/register.component';
     CommonModule,
     FormsModule,
     SharedModule,
+<<<<<<< HEAD
     ReactiveFormsModule
+=======
+    RouterModule
+>>>>>>> Ezequiel
   ],
   exports: [
 

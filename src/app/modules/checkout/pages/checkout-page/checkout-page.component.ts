@@ -5,6 +5,8 @@ import { EditPayModeComponent } from '../../components/edit-pay-mode/edit-pay-mo
 import { DeliveryType, PayMode } from 'src/app/core/enums';
 import { EditDeliveryTypeComponent } from '../../components/edit-delivery-type/edit-delivery-type.component';
 import { SendOrderDialogComponent } from '../../components/send-order-dialog/send-order-dialog.component';
+import { User } from 'src/app/core/models';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-checkout-page',
@@ -13,11 +15,16 @@ import { SendOrderDialogComponent } from '../../components/send-order-dialog/sen
 })
 export class CheckoutPageComponent {
 
+  private user!: User;
+
   public address: string = 'Ingresa tu dirección';
   public payMode: PayMode = PayMode.withoutPaymentMethod;
   public deliveryType: DeliveryType = DeliveryType.Delivery;
 
-  constructor(private dialog: MatDialog){}
+  constructor(private dialog: MatDialog, private authService: AuthService) {
+
+
+  }
 
   editAddress(){
     const dialogRef = this.dialog.open(EditAddressComponent, {data: this.address, height: '220px', width: '300px'});

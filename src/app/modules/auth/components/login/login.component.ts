@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { CartService } from '../../../../core/services/cart.service';
 
 @Component({
   selector: 'auth-login',
@@ -20,7 +21,7 @@ export class LoginComponent {
     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
   })
 
-  constructor(private authService: AuthService, private router: Router, private fb: FormBuilder) { }
+  constructor(private authService: AuthService, private router: Router, private fb: FormBuilder, private cartService: CartService) { }
 
 
   public async initSession() {
@@ -30,23 +31,33 @@ export class LoginComponent {
 
     try {
       let isLogin: boolean = await this.authService.login(this.loginForm.value.email, this.loginForm.value.password);
-      
 
-      if (isLogin) {
-        this.router.navigate(["/products"])
+       if (isLogin) {
+
+        if (this.authService.fromCartPageComponent) {
+          //Guardar el carrito ACA
+          this.cartService.saveCartJson();
+
+          this.router.navigate(['/checkout']);
+          this.authService.fromCartPageComponent = false;
+
+        } else {
+          this.router.navigate(['/products']);
+        }
       }else{
-        
+
         this.email = this.loginForm.value.email;
         this.loginForm.reset({ email: this.email });
 
       }
+
     } catch (error) {
       console.log(error);
     }
   }
 
   isValidFiled(field: string): boolean | null {
-    
+
     return this.loginForm.controls[field].errors && this.loginForm.controls[field].touched;
   }
 
@@ -66,10 +77,10 @@ export class LoginComponent {
         return "Email inválido.";
       }
     }
-    
+
     return null;
   }
 
-  
+
 
 }

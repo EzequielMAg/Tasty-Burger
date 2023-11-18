@@ -46,6 +46,12 @@ export class RegisterComponent {
       this.registerForm.reset({ name: this.user.name });
     }
 
+<<<<<<< HEAD
+=======
+  public registerUser(){
+    this.authService.addUser(this.user);
+    this.router.navigate(["/auth/login"]);
+>>>>>>> Ezequiel
     console.log(this.user);
   }
 
