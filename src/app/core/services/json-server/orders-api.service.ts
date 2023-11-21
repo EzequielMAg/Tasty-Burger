@@ -12,7 +12,7 @@ export class OrdersApiService {
     
 
     public getOrdersByUserId(userId: string):  Observable<Order[]> {
-        return this.http.get<User>(`${this.baseURL}/${userId}}`).pipe(
+        return this.http.get<User>(`${this.baseURL}/${userId}`).pipe(
           map((resp) => resp.orders)
         );
       }

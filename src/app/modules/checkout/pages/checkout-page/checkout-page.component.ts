@@ -73,7 +73,7 @@ export class CheckoutPageComponent {
       dateTime: currentDate,
       address: this.user.address,
       idUser: this.user.id,
-      productLineArray: this.cartService.cart.productLineArray})
+      productLineArray: [...this.cartService.cart.productLineArray]})
 
     this.ordersService.saveOrderInUser(order);
     const dialogRef = this.dialog.open(SendOrderDialogComponent, {height: '280', width: '400'});

@@ -6,54 +6,13 @@
       "email": "adm@gmail.com",
       "password": "123456",
       "phoneNumber": 2254532122,
-      "address": "av.victor hugo 123",
+      "address": "arcachon 763",
       "cart": {
         "id": "",
-        "productLineArray": [
-          {
-            "id": "",
-            "quantity": 1,
-            "idProduct": "3"
-          },
-          {
-            "id": "",
-            "quantity": 1,
-            "idProduct": "16"
-          },
-          {
-            "id": "",
-            "quantity": 1,
-            "idProduct": "17"
-          }
-        ],
-        "totalToPay": 6000
+        "productLineArray": [],
+        "totalToPay": 0
       },
       "orders": [
-        {
-          "id": "119404",
-          "totalPaid": 6000,
-          "payMode": "Pagar al recibir - Efectivo",
-          "dateTime": "2023-11-21T20:08:14.264Z",
-          "address": "av.victor hugo 123",
-          "productLineArray": [
-            {
-              "id": "",
-              "quantity": 1,
-              "idProduct": "3"
-            },
-            {
-              "id": "",
-              "quantity": 1,
-              "idProduct": "16"
-            },
-            {
-              "id": "",
-              "quantity": 1,
-              "idProduct": "17"
-            }
-          ],
-          "idUser": "1"
-        }
       ]
     },
     {

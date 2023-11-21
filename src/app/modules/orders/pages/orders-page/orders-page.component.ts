@@ -18,9 +18,7 @@ export class OrdersPageComponent implements OnInit{
   public get orders(): Order[] {
     return this._orders;
   }
-  public set orders(value: Order[]) {
-    this._orders = value;
-  }
+
 
   constructor(private ordersApiService: OrdersApiService, private authService : AuthService){}
   
@@ -30,11 +28,11 @@ export class OrdersPageComponent implements OnInit{
 
   public async getOrders() {
     try {
-      this.authService.currentUser?.id
-      let responseApi = this.ordersApiService.getOrdersByUserId(this.authService.currentUser?.id ?? '');
+      let responseApi = this.ordersApiService.getOrdersByUserId(this.authService.currentUser!.id);
       const data = await lastValueFrom(responseApi);
 
-      this.orders = data.map( (orderData: any) => new Order(orderData) );
+      this._orders = data.map( (orderData: any) => new Order(orderData) );
+      console.log(this._orders);
 
     } catch (error) {
       console.log(error);
