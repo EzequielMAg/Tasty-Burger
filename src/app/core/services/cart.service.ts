@@ -74,7 +74,8 @@ export class CartService {
 
   public saveCartJson(): void {
 
-    this.cartApiService.updateCart(this.authService.currentUser!, this._cart).subscribe({
+    if(this.authService.currentUser === undefined) return;
+    this.cartApiService.updateCart(this.authService.currentUser, this._cart).subscribe({
 
       next: () => console.log("CARRITO GUARDADO CON EXITO"),
       error: (error) => console.log(error)

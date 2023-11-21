@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './shared/pages/home-page/home-page.component';
-import { Error404Component } from './shared/pages/error404/error404.component';
+import { authGuard } from './core/guards/auth.guard';
+import { loginRegisterGuard } from './core/guards/login-register.guard';
 
 const routes: Routes = [
   {
@@ -14,23 +14,28 @@ const routes: Routes = [
   },
   {
     path: 'orders',
-    loadChildren: () => import('./modules/orders/orders.module').then( m => m.OrdersModule )
+    loadChildren: () => import('./modules/orders/orders.module').then( m => m.OrdersModule ),
+    canActivate: [authGuard]
   },
   {
     path: 'checkout',
-    loadChildren: () => import('./modules/checkout/checkout.module').then( m => m.CheckoutModule)
+    loadChildren: () => import('./modules/checkout/checkout.module').then( m => m.CheckoutModule),
+    canActivate: [authGuard]
   },
   {
     path: 'auth',
-    loadChildren: () => import('./modules/auth/auth.module').then( m => m.AuthModule )
+    loadChildren: () => import('./modules/auth/auth.module').then( m => m.AuthModule ),
+    canActivate: [loginRegisterGuard]
   },
   {
     path: 'home',
-    component: HomePageComponent
+    //component: HomePageComponent
+    loadComponent: () => import('./standalones/home-page/home-page.component').then( m => m.HomePageComponent )
   },
   {
     path: '404',
-    component: Error404Component
+    //component: Error404Component
+    loadComponent: () => import('./standalones/error404/error404.component').then( m => m.Error404Component )
   },
   {
     path: '',
