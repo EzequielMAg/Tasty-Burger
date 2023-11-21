@@ -54,7 +54,7 @@ export class CheckoutPageComponent {
     const dialogRef = this.dialog.open(EditPayModeComponent, {data: this.payMode, height: '400px', width: '350px'});
     dialogRef.afterClosed().subscribe(result => {
       console.log("el cuadro de dialogo se cerro con resultado: ", result);
-    console.log(this.payMode);
+      this.payMode = result;
 
     })
   }
