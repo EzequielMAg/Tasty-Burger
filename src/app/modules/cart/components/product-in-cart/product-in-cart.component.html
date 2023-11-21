@@ -1,4 +1,4 @@
-<div class="my-container" routerLink="/cart" routerLinkActive="active">
+<div class="my-container" [ngClass]="{'onCartPath': isCartView()}">
   <ng-container *ngIf="product !== undefined">
     <h5> {{ product.name }} </h5>
 
