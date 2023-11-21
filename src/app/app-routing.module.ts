@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './shared/pages/home-page/home-page.component';
-import { Error404Component } from './standalones/error404/error404.component';
 
 const routes: Routes = [
   {
@@ -26,7 +24,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomePageComponent
+    //component: HomePageComponent
+    loadComponent: () => import('./standalones/home-page/home-page.component').then( m => m.HomePageComponent )
   },
   {
     path: '404',

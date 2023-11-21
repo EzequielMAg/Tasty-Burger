@@ -4,10 +4,7 @@ import { Component } from '@angular/core';
   selector: 'shared-error404',
   templateUrl: './error404.component.html',
 
-  standalone: true,
-  imports: [
-
-  ]
+  standalone: true
 })
 export class Error404Component {
 
