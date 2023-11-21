@@ -64,9 +64,10 @@ export class CheckoutPageComponent {
   onSubmit(){
 
     const currentDate = new Date();
+    let idRandom = this.getRandomNumber().toString();
 
     let order : Order = new Order
-    ({id: '', 
+    ({id: idRandom, 
       totalPaid: this.cartService.totalToPay, 
       payMode: this.payMode,
       dateTime: currentDate,
@@ -81,6 +82,11 @@ export class CheckoutPageComponent {
 
     })
 
+  }
+
+  getRandomNumber(): number{
+    const randomNumber = Math.random();
+    return Math.floor(randomNumber * (300000 - 90000 + 1)) + 90000;
   }
 
 

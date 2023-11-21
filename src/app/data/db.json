@@ -6,7 +6,7 @@
       "email": "adm@gmail.com",
       "password": "123456",
       "phoneNumber": 2254532122,
-      "address": "av.victor hugo 1",
+      "address": "av.victor hugo 123",
       "cart": {
         "id": "",
         "productLineArray": [
@@ -18,23 +18,23 @@
           {
             "id": "",
             "quantity": 1,
-            "idProduct": "2"
+            "idProduct": "16"
           },
           {
             "id": "",
             "quantity": 1,
-            "idProduct": "1"
+            "idProduct": "17"
           }
         ],
-        "totalToPay": 12700
+        "totalToPay": 6000
       },
       "orders": [
         {
-          "id": "",
-          "totalPaid": 12700,
+          "id": "119404",
+          "totalPaid": 6000,
           "payMode": "Pagar al recibir - Efectivo",
-          "dateTime": "2023-11-21T19:39:56.300Z",
-          "address": "Ingresa tu dirección",
+          "dateTime": "2023-11-21T20:08:14.264Z",
+          "address": "av.victor hugo 123",
           "productLineArray": [
             {
               "id": "",
@@ -44,37 +44,12 @@
             {
               "id": "",
               "quantity": 1,
-              "idProduct": "2"
+              "idProduct": "16"
             },
             {
               "id": "",
               "quantity": 1,
-              "idProduct": "1"
-            }
-          ],
-          "idUser": "1"
-        },
-        {
-          "id": "",
-          "totalPaid": 12700,
-          "payMode": "Pagar al recibir - Efectivo",
-          "dateTime": "2023-11-21T19:56:32.229Z",
-          "address": "av.victor hugo 1",
-          "productLineArray": [
-            {
-              "id": "",
-              "quantity": 1,
-              "idProduct": "3"
-            },
-            {
-              "id": "",
-              "quantity": 1,
-              "idProduct": "2"
-            },
-            {
-              "id": "",
-              "quantity": 1,
-              "idProduct": "1"
+              "idProduct": "17"
             }
           ],
           "idUser": "1"
