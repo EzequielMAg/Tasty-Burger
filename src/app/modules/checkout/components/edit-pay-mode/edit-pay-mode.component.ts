@@ -11,7 +11,7 @@ export class EditPayModeComponent implements OnInit{
 
   public payModeValues: [string, PayMode] [] = Object.entries(PayMode); 
 
-  public payModeToModify: PayMode = PayMode.withoutPaymentMethod;
+  public payModeToModify: PayMode = PayMode.CashOnDelivery;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private dialogRef: MatDialogRef<EditPayModeComponent>) {}
   ngOnInit(): void {
@@ -19,12 +19,14 @@ export class EditPayModeComponent implements OnInit{
   }
 
   public onSubmit(){
-    console.log(this.payModeToModify);
-    this.closeDialog();
+    this.dialogRef.close(this.payModeToModify);
   }
 
   public closeDialog(){
     this.dialogRef.close();
+  }
+  onPayModeChange(selectedPayMode: PayMode): void {
+    this.payModeToModify = selectedPayMode;
   }
 
 }

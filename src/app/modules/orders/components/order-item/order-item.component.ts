@@ -33,12 +33,9 @@ export class OrderItemComponent {
     return new Intl.DateTimeFormat("es-ES", options).format(date).replace(',', '').concat(" hs");
   }
 
-  public getProductByid(idProduct: string): Product {
-
-    //console.log(idProduct);
-    const test = this.productService.getProductById(idProduct)!;
-    //console.log(test);
-    return test;
+  public getProductById(idProduct : string): Product {
+    return this.productService.getProductById(idProduct)!;
   }
+
 
 }

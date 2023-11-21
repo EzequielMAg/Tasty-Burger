@@ -1,16 +1,17 @@
 <form (ngSubmit)="onSubmit()" class="edit-delivery-type">
-    <div *ngFor="let deliveryType of deliveryTypeEntries">
+   <div *ngFor="let deliveryType of deliveryTypeEntries">
 
        <div class="form-check">
          <label class="form-check-label" for="{{deliveryType[1]}}">
-          <input class="form-check-input" type="radio" name="deliveryTypeGroup" id="{{deliveryType[1]}}" [value]="deliveryType[0]" [(ngModel)]="deliveryTypeToModify">
+          <input class="form-check-input" type="radio" name="deliveryTypeGroup" id="{{deliveryType[1]}}" [value]="deliveryType[1]" [(ngModel)]="deliveryTypeToModify">
           {{deliveryType[1]}}
          </label>
        </div>
     </div>
 
-    <div class="btn-group">
-       <button class="e-btn" type="submit" id="save-changes">Guardar cambios</button>
-       <button class="e-btn" (click)="closeDialog()" id="cancel">Cancelar</button>
-    </div>
-  </form>
+
+      <div class="btn-group">
+         <button class="e-btn" type="submit" id="save-changes">Guardar cambios</button>
+         <button class="e-btn" (click)="closeDialog()" id="cancel">Cancelar</button>
+      </div>
+</form>

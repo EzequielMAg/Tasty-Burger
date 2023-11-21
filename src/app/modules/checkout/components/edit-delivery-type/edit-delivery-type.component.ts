@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { ChangeDetectorRef, Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DeliveryType } from 'src/app/core/enums';
 
@@ -13,18 +13,17 @@ export class EditDeliveryTypeComponent {
 
   public deliveryTypeToModify: DeliveryType = DeliveryType.Delivery;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private dialogRef: MatDialogRef<EditDeliveryTypeComponent>) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private dialogRef: MatDialogRef<EditDeliveryTypeComponent>,  private cdr: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.deliveryTypeToModify = this.data;
   }
 
   public onSubmit(){
-    console.log(this.deliveryTypeToModify);
-    this.closeDialog();
+    this.dialogRef.close(this.deliveryTypeToModify);
   }
 
   public closeDialog(){
-    this.dialogRef.close();
+    this.dialogRef.close(false);
   }
 
 }

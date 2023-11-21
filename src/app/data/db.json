@@ -6,19 +6,14 @@
       "email": "adm@gmail.com",
       "password": "123456",
       "phoneNumber": 2254532122,
-      "address": "Sin dirección",
+      "address": "arcachon 763",
       "cart": {
         "id": "",
-        "productLineArray": [
-          {
-            "id": "",
-            "quantity": 10,
-            "idProduct": "2"
-          }
-        ],
-        "totalToPay": 42000
+        "productLineArray": [],
+        "totalToPay": 0
       },
-      "orders": []
+      "orders": [
+      ]
     },
     {
       "id": "2",

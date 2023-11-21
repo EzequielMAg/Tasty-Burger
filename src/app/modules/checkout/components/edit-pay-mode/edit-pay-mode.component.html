@@ -1,13 +1,19 @@
 <form (ngSubmit)="onSubmit()" class="edit-pay-mode">
-    <div *ngFor="let payMode of payModeValues">
+    <div *ngFor="let payMode of payModeValues; let i = index">
 
        <div class="form-check">
          <label class="form-check-label" for="{{payMode[1]}}">
-          <input class="form-check-input" type="radio" name="payModeGroup" id="{{payMode[1]}}" [value]="payMode[0]" [(ngModel)]="payModeToModify">
+          <input class="form-check-input" 
+                 type="radio" 
+                 name="payModeGroup" 
+                 id="{{payMode[1]}}" 
+                 (change)="onPayModeChange(payMode[1])"
+                 [disabled]="i !== 0">
           {{payMode[1]}}
          </label>
        </div>
     </div>
+    
     
     <div class="btn-group">
        <button class="e-btn" type="submit" id="save-changes">Guardar cambios</button>
