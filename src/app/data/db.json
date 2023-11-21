@@ -9,23 +9,7 @@
       "address": "",
       "cart": {
         "id": "",
-        "productLineArray": [
-          {
-            "id": "",
-            "quantity": 1,
-            "idProduct": "1"
-          },
-          {
-            "id": "",
-            "quantity": 2,
-            "idProduct": "2"
-          },
-          {
-            "id": "",
-            "quantity": 3,
-            "idProduct": "3"
-          }
-        ],
+        "productLineArray": [],
         "totalToPay": 25500
       },
       "orders": []
@@ -39,23 +23,7 @@
       "address": "",
       "cart": {
         "id": "",
-        "productLineArray": [
-          {
-            "id": "",
-            "quantity": 1,
-            "idProduct": "1"
-          },
-          {
-            "id": "",
-            "quantity": 1,
-            "idProduct": "2"
-          },
-          {
-            "id": "",
-            "quantity": 1,
-            "idProduct": "3"
-          }
-        ],
+        "productLineArray": [],
         "totalToPay": 12700
       },
       "orders": []
@@ -83,23 +51,7 @@
       "address": "",
       "cart": {
         "id": "",
-        "productLineArray": [
-          {
-            "id": "",
-            "quantity": 3,
-            "idProduct": "3"
-          },
-          {
-            "id": "",
-            "quantity": 1,
-            "idProduct": "1"
-          },
-          {
-            "id": "",
-            "quantity": 2,
-            "idProduct": "2"
-          }
-        ],
+        "productLineArray": [],
         "totalToPay": 25500
       },
       "orders": []
