@@ -28,7 +28,58 @@
         ],
         "totalToPay": 12700
       },
-      "orders": []
+      "orders": [
+        {
+          "id": "",
+          "totalPaid": 12700,
+          "payMode": "Pagar al recibir - Efectivo",
+          "dateTime": "2023-11-21T19:39:56.300Z",
+          "address": "Ingresa tu dirección",
+          "productLineArray": [
+            {
+              "id": "",
+              "quantity": 1,
+              "idProduct": "3"
+            },
+            {
+              "id": "",
+              "quantity": 1,
+              "idProduct": "2"
+            },
+            {
+              "id": "",
+              "quantity": 1,
+              "idProduct": "1"
+            }
+          ],
+          "idUser": "1"
+        },
+        {
+          "id": "",
+          "totalPaid": 12700,
+          "payMode": "Pagar al recibir - Efectivo",
+          "dateTime": "2023-11-21T19:56:32.229Z",
+          "address": "av.victor hugo 1",
+          "productLineArray": [
+            {
+              "id": "",
+              "quantity": 1,
+              "idProduct": "3"
+            },
+            {
+              "id": "",
+              "quantity": 1,
+              "idProduct": "2"
+            },
+            {
+              "id": "",
+              "quantity": 1,
+              "idProduct": "1"
+            }
+          ],
+          "idUser": "1"
+        }
+      ]
     },
     {
       "id": "2",
