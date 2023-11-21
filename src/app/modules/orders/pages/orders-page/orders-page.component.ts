@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 
 import { Order } from 'src/app/core/models';
+import { AuthService } from 'src/app/core/services/auth.service';
 import { OrdersApiService } from 'src/app/core/services/json-server/orders-api.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class OrdersPageComponent implements OnInit{
     this._orders = value;
   }
 
-  constructor(private ordersApiService: OrdersApiService){}
+  constructor(private ordersApiService: OrdersApiService, private authService : AuthService){}
   
   ngOnInit(): void {
     this.getOrders();
@@ -29,7 +30,8 @@ export class OrdersPageComponent implements OnInit{
 
   public async getOrders() {
     try {
-      let responseApi = this.ordersApiService.getOrders();
+      this.authService.currentUser?.id
+      let responseApi = this.ordersApiService.getOrdersByUserId(this.authService.currentUser?.id ?? '');
       const data = await lastValueFrom(responseApi);
 
       this.orders = data.map( (orderData: any) => new Order(orderData) );
