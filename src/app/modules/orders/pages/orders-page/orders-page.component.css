@@ -1,9 +1,8 @@
 .wrapper{
     background-image: url('./../../../../../assets/images/patron-prueba6.png');
     background-repeat: repeat;
-    padding: .5rem 1.3rem 0 1.3rem;
+    padding: .5rem 1.3rem 1.5rem 1.3rem;
 
-    
 }
 
 h1{
@@ -11,6 +10,23 @@ h1{
    color:white;
    text-align: center;
     
+}
+.order-details{
+    /* margin: 0 .5rem; */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1.5rem 3rem 0 3rem;
+    padding: .5rem 0;
+}
+
+.order-empty{
+    padding: 8rem;
+    text-align: center;
+}
+
+.order-empty i{
+    padding: 2rem;
 }
 
 

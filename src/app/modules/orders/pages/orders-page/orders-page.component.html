@@ -4,7 +4,18 @@
     </div>
   
     <div>
-      <orders-list [orders]="orders"></orders-list>
+      <ng-container *ngIf="orders.length > 0; else noOrders">
+        <orders-list [orders]="orders"></orders-list>
+      </ng-container>
+      
+      <ng-template #noOrders>
+        <div class="order-details order-empty">
+          <i class="fa-solid fa-shop fa-2xl"></i>
+            <h4>Historial de pedidos vacio! Ve al menu para realizar un pedido</h4>
+        </div>
+      </ng-template>
+      
     </div>
 </div>
   
+
