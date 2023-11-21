@@ -1,13 +1,11 @@
 <form (ngSubmit)="editAddress()" class="edit-address">
     <div>
-        <label for="">Dirección</label>
-        <input type="text" [(ngModel)] = "address">
-        <p>{{address}}sdfdsfs</p>
-
+        <label for="address" for="">Dirección</label>
+        <input name="address" type="text" [(ngModel)] = "address">
     </div>
+
     <div class="btn-group">
         <button class="e-btn" type="submit">Guardar cambios</button>
         <button class="e-btn" (click)="closeDialog()">Cancelar</button>
-
     </div>
 </form>

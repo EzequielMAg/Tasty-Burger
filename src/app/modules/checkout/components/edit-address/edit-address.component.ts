@@ -13,21 +13,24 @@ export class EditAddressComponent implements OnInit{
   public address: string = 'Sin dirección';
   
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private dialogRef: MatDialogRef<EditAddressComponent>,
-   private usersApiService: UsersApiService, private authService: AuthService ){}
-  ngOnInit(): void {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, 
+              private dialogRef: MatDialogRef<EditAddressComponent>,
+              private usersApiService: UsersApiService, 
+              private authService: AuthService ) { }
+  
+   ngOnInit(): void {
     this.address = this.data;
+    console.log(this.address);
+    console.log(this.data);
   }
 
   public editAddress(){
 
       this.usersApiService.updateAddress(this.authService.currentUser!, this.address).subscribe({
   
-        next: () => console.log("direccion GUARDADO CON EXITO"),
+        next: () => console.log("direccion GUARDADA CON EXITO"),
         error: (error) => console.log(error)
       });
-      console.log(this.address);
-    console.log("Se edito la dirección");
     this.closeDialog();
   }
 

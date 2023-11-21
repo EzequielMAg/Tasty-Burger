@@ -12,7 +12,7 @@ input{
 .edit-address{
     display: flex;
     flex-direction: column;
-    margin: 2.5rem 2rem;
+    margin: 2.4rem 2rem;
     gap: 3rem;
 }
 .e-btn{

@@ -23,7 +23,8 @@ export class AuthService {
   get currentUser(): User | undefined {
     if (!this.user) return undefined;
 
-    return structuredClone(this.user)
+    //return structuredClone(this.user)
+    return this.user;
   }
 
   public async login(email: string, password: string): Promise<boolean> {

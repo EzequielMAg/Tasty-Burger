@@ -18,17 +18,15 @@ export class CheckoutPageComponent {
   private user!: User;
 
   public address: string = 'Ingresa tu dirección';
-  public payMode: PayMode = PayMode.withoutPaymentMethod;
   public deliveryType: DeliveryType = DeliveryType.Delivery;
+  public payMode: PayMode = PayMode.withoutPaymentMethod;
 
   constructor(private dialog: MatDialog, private authService: AuthService) {
     this.user = this.authService.currentUser!;
 
   }
 
-
   get currentAddress(): string {
-    console.log("checkou ..--> " + this.user.address);
     if(this.user.address !== '') {
       return this.user.address;
     } else {
@@ -37,7 +35,7 @@ export class CheckoutPageComponent {
   }
 
   public editAddress(){
-    const dialogRef = this.dialog.open(EditAddressComponent, {data: this.address, height: '220px', width: '300px'});
+    const dialogRef = this.dialog.open(EditAddressComponent, {data: this.user.address, height: '220px', width: '300px'});
     dialogRef.afterClosed().subscribe(result => {
       console.log("el cuadro de dialogo se cerro con resultado: ", result);
     })
@@ -47,7 +45,8 @@ export class CheckoutPageComponent {
     const dialogRef = this.dialog.open(EditDeliveryTypeComponent, {data: this.deliveryType, height: '220px', width: '300px'});
     dialogRef.afterClosed().subscribe(result => {
       console.log("el cuadro de dialogo se cerro con resultado: ", result);
-    console.log(this.deliveryType);
+    this.deliveryType = result;
+
   })
   }
 

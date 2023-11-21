@@ -6,27 +6,27 @@
       "email": "adm@gmail.com",
       "password": "123456",
       "phoneNumber": 2254532122,
-      "address": "Sin dirección",
+      "address": "av.victor hugo 1",
       "cart": {
         "id": "",
         "productLineArray": [
           {
             "id": "",
             "quantity": 1,
-            "idProduct": "1"
+            "idProduct": "3"
           },
           {
             "id": "",
-            "quantity": 2,
+            "quantity": 1,
             "idProduct": "2"
           },
           {
             "id": "",
-            "quantity": 3,
-            "idProduct": "3"
+            "quantity": 1,
+            "idProduct": "1"
           }
         ],
-        "totalToPay": 25500
+        "totalToPay": 12700
       },
       "orders": []
     },
