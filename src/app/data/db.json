@@ -9,8 +9,14 @@
       "address": "",
       "cart": {
         "id": "",
-        "productLineArray": [],
-        "totalToPay": 25500
+        "productLineArray": [
+          {
+            "id": "",
+            "quantity": 10,
+            "idProduct": "2"
+          }
+        ],
+        "totalToPay": 42000
       },
       "orders": []
     },
