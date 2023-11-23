@@ -20,5 +20,36 @@ footer{
 
 .social-networks{
     display: flex;
-    gap: 1.2rem;
+    gap: 4rem;
+    justify-content: space-between;
 }
+
+.social-networks-container{
+    gap: 1.2rem;
+    text-align: center;
+}
+
+.footer-social-media-btn:hover {
+    transform: scale(1.2);
+
+    
+}
+
+/* .footer-youtube:hover{
+
+} */
+.footer-facebook{
+    color: #146ebe;
+}
+
+.footer-facebook i:hover, .footer-facebook i:active, .footer-facebook i:focus{
+    color: #fff;
+    background-color: #3b5998;
+    filter: drop-shadow(0 0 8px #3b5998);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    transition: .1s;
+    text-align: center;
+}
+
