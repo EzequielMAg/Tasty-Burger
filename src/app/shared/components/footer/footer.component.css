@@ -23,7 +23,7 @@ footer{
     justify-content: space-between;
 }
 
-.elemento-nav :nth-child(3){
+.elemento-nav:nth-child(3){
     align-items: center;
 }
 
@@ -54,7 +54,6 @@ footer{
     background-color: #8134af;
     -webkit-filter: drop-shadow(0 0 8px #8134af);
     filter: drop-shadow(0 0 8px rgba(129,52,175,1));
-    background-clip: border-box;
     background-clip: initial;
     -webkit-background-clip: initial;
     -webkit-text-fill-color: initial;
@@ -75,6 +74,7 @@ footer{
 .footer-x:hover{
     color: white;
     background-color: black;
+    filter: drop-shadow(0 0 8px black);
 }
 
 .footer-youtube{
@@ -83,4 +83,5 @@ footer{
 .footer-youtube:hover{
     color: white;
     background-color: #fb0000;
+    filter: drop-shadow(0 0 8px #fb0000);
 }
