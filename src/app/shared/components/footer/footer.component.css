@@ -1,6 +1,5 @@
 .nav-footer{
     display: flex;
-    /* background-color: aquamarine; */
     gap: 10rem;
 }
 
@@ -20,32 +19,19 @@ footer{
 
 .social-networks{
     display: flex;
-    gap: 4rem;
+    gap: 1rem;
     justify-content: space-between;
 }
 
-.social-networks-container{
-    gap: 1.2rem;
-    text-align: center;
+.elemento-nav :nth-child(3){
+    align-items: center;
 }
 
-.footer-social-media-btn:hover {
-    transform: scale(1.2);
-
-    
-}
-
-/* .footer-youtube:hover{
-
-} */
-.footer-facebook{
-    color: #146ebe;
-}
-
-.footer-facebook i:hover, .footer-facebook i:active, .footer-facebook i:focus{
-    color: #fff;
-    background-color: #3b5998;
-    filter: drop-shadow(0 0 8px #3b5998);
+.footer-social-media-btn{
+    margin: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
@@ -53,3 +39,48 @@ footer{
     text-align: center;
 }
 
+.footer-social-media-btn:hover {
+    transform: scale(1.2);
+}
+
+.footer-instagram{
+    background: -webkit-linear-gradient(225deg,#8134af,#dd2a7b 50%,#feda77 85%,#f58529);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.footer-instagram:hover{
+    color: #fff;
+    background-color: #8134af;
+    -webkit-filter: drop-shadow(0 0 8px #8134af);
+    filter: drop-shadow(0 0 8px rgba(129,52,175,1));
+    background-clip: border-box;
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
+.footer-facebook{
+    color: #3b5998;
+}
+.footer-facebook:hover{
+    color: #fff;
+    background-color: #3b5998;
+    filter: drop-shadow(0 0 8px #3b5998);
+}
+
+.footer-x{
+    color: black;
+}
+.footer-x:hover{
+    color: white;
+    background-color: black;
+}
+
+.footer-youtube{
+    color: #fb0000;
+}
+.footer-youtube:hover{
+    color: white;
+    background-color: #fb0000;
+}
