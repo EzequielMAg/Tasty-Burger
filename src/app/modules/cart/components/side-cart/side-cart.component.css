@@ -4,15 +4,16 @@
   top: 5rem;
   bottom: 2rem;
 
+  margin-top: .8rem;
 }
 .cart-header {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
 }
 
 .cart-title {
-  flex-grow: 1; 
+  flex-grow: 1;
   text-align: center;
   color: white;
 }
@@ -76,8 +77,8 @@ list-products-cart {
   height: 1.8rem;
   width: 1.8rem;
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   text-align: center;
   margin-right: 10px;
 }
@@ -99,4 +100,8 @@ list-products-cart {
 
 .cart-checkout-btn:hover {
   background-color: #e64b0a;
+}
+
+h3 {
+  margin-top: .5rem;
 }

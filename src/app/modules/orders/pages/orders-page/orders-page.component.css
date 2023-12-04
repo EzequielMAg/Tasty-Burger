@@ -1,22 +1,24 @@
 .wrapper{
-    background-image: url('./../../../../../assets/images/patron-prueba6.png');
-    background-repeat: repeat;
-    padding: .5rem 1.3rem 4rem 1.3rem;
+  background-image: url('./../../../../../assets/images/patron-prueba6.png');
+  background-repeat: repeat;
+  padding: .5rem 1.3rem 4rem 1.3rem;
+
+  min-height: calc(100vh - 234px);
 }
 
 h1{
-   background: linear-gradient(-45deg, #ff7c00 0%, rgb(221, 58, 14) 100%);
-   color:white;
-   text-align: center;
+  background: linear-gradient(-45deg, #ff7c00 0%, rgb(221, 58, 14) 100%);
+  color:white;
+  text-align: center;
 }
 
 .order-details{
-    /* margin: 0 .5rem; */
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    margin: 1.5rem 3rem 0 3rem;
-    padding: .5rem 0;
+  /* margin: 0 .5rem; */
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 1.5rem 3rem 0 3rem;
+  padding: .5rem 0;
 }
 
 .order-empty{

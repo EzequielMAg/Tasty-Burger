@@ -1,14 +1,16 @@
 .wrapper{
-    background-image: url('./../../../../../assets/images/patron-prueba6.png');
-    background-repeat: repeat;
-    padding: .5rem 1.3rem 1.5rem 1.3rem;
+  background-image: url('./../../../../../assets/images/patron-prueba6.png');
+  background-repeat: repeat;
+  padding: .5rem 1.3rem 1.5rem 1.3rem;
+
+  min-height: calc(100vh - 234px);
 }
 
 h1{
     background: linear-gradient(-45deg, #ff7c00 0%, rgb(221, 58, 14) 100%);
     color:white;
     text-align: center;
-     
+
  }
 
 .title{
@@ -43,12 +45,12 @@ h1{
     color: rgb(255, 255, 255);
     text-decoration: none;
     background-color: rgb(51, 51, 51);
-    
+
     margin: 0 auto;
-    
+
 }
 
-  
+
 .btn:hover {
     background-color: rgb(255, 127, 31);
 }
