@@ -37,14 +37,14 @@ export class CheckoutPageComponent {
   }
 
   public editAddress(){
-    const dialogRef = this.dialog.open(EditAddressComponent, {data: this.user.address, height: '220px', width: '300px'});
+    const dialogRef = this.dialog.open(EditAddressComponent, {data: this.user.address, height: '220px', width: '350px'});
     dialogRef.afterClosed().subscribe(result => {
       console.log("el cuadro de dialogo se cerro con resultado: ", result);
     })
   }
 
   public editDeliveryType(){
-    const dialogRef = this.dialog.open(EditDeliveryTypeComponent, {data: this.deliveryType, height: '220px', width: '300px'});
+    const dialogRef = this.dialog.open(EditDeliveryTypeComponent, {data: this.deliveryType, height: '230px', width: '350px'});
     dialogRef.afterClosed().subscribe(result => {
       console.log("el cuadro de dialogo se cerro con resultado: ", result);
     this.deliveryType = result;
@@ -53,7 +53,7 @@ export class CheckoutPageComponent {
   }
 
   public editPayMode(){
-    const dialogRef = this.dialog.open(EditPayModeComponent, {data: this.payMode, height: '400px', width: '350px'});
+    const dialogRef = this.dialog.open(EditPayModeComponent, {data: this.payMode, height: '420px', width: '350px'});
     dialogRef.afterClosed().subscribe(result => {
       console.log("el cuadro de dialogo se cerro con resultado: ", result);
       this.payMode = result;
@@ -67,8 +67,8 @@ export class CheckoutPageComponent {
     let idRandom = this.getRandomNumber().toString();
 
     let order : Order = new Order
-    ({id: idRandom, 
-      totalPaid: this.cartService.totalToPay, 
+    ({id: idRandom,
+      totalPaid: this.cartService.totalToPay,
       payMode: this.payMode,
       dateTime: currentDate,
       address: this.user.address,

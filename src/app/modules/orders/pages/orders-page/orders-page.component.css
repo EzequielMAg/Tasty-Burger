@@ -1,16 +1,15 @@
 .wrapper{
     background-image: url('./../../../../../assets/images/patron-prueba6.png');
     background-repeat: repeat;
-    padding: .5rem 1.3rem 1.5rem 1.3rem;
-
+    padding: .5rem 1.3rem 4rem 1.3rem;
 }
 
 h1{
    background: linear-gradient(-45deg, #ff7c00 0%, rgb(221, 58, 14) 100%);
    color:white;
    text-align: center;
-    
 }
+
 .order-details{
     /* margin: 0 .5rem; */
     display: flex;
@@ -34,10 +33,10 @@ h1{
     margin-top:4rem;
 }
 
-  
+
 @media (min-width: 1100px){
 
     .wrapper{
-        padding: .5rem 2.3rem 0 2.3rem;
+        padding: .5rem 2.3rem 4rem 2.3rem;
     }
 }
