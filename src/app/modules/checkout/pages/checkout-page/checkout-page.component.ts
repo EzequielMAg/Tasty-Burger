@@ -75,12 +75,12 @@ export class CheckoutPageComponent {
       idUser: this.user.id,
       productLineArray: [...this.cartService.cart.productLineArray]})
 
-    this.ordersService.saveOrderInUser(order);
-    const dialogRef = this.dialog.open(SendOrderDialogComponent, {height: '280', width: '400'});
-    dialogRef.afterClosed().subscribe(result => {
-      console.log("el cuadro de dialogo se cerro con resultado: ", result);
+      this.ordersService.saveOrderInUser(order);
 
-    })
+      const dialogRef = this.dialog.open(SendOrderDialogComponent, {height: '280', width: '400'});
+      dialogRef.afterClosed().subscribe(result => {
+        console.log("el cuadro de dialogo se cerro con resultado: ", result);
+      });
 
   }
 

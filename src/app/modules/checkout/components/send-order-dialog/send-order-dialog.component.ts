@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
   selector: 'app-send-order-dialog',
@@ -9,7 +10,8 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 export class SendOrderDialogComponent implements OnInit{
 
 
-  constructor(private dialogRef: MatDialogRef<SendOrderDialogComponent>) {}
+  constructor(private dialogRef: MatDialogRef<SendOrderDialogComponent>,
+              private cartService: CartService) {}
   ngOnInit(): void {
   }
 
@@ -21,4 +23,7 @@ export class SendOrderDialogComponent implements OnInit{
     this.dialogRef.close();
   }
 
+  public clearCart(): void {
+    this.cartService.clearCart();
+  }
 }
