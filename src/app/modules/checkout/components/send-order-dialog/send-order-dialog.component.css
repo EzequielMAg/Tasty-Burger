@@ -5,7 +5,7 @@
     background-color: rgb(51, 51, 51);
     padding: 0.5rem;
     border-radius: 7px;
-    
+
 }
 
 .e-btn:hover {
@@ -14,7 +14,7 @@
 
 .btn-group{
     display: flex;
-    justify-content: space-between;
+    justify-content: center
 }
 
 .send-order-dialog{
