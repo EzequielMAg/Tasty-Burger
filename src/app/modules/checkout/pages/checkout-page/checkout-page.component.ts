@@ -21,7 +21,7 @@ export class CheckoutPageComponent {
 
   public address: string = 'Ingresa tu dirección';
   public deliveryType: DeliveryType = DeliveryType.Delivery;
-  public payMode: PayMode = PayMode.withoutPaymentMethod;
+  public payMode: PayMode = PayMode.CashOnDelivery;
 
   constructor(private dialog: MatDialog, private authService: AuthService, private ordersService: OrdersService, private cartService: CartService) {
     this.user = this.authService.currentUser!;
